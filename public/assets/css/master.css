@@ -1,0 +1,15 @@
+
+.video-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: calc (100vw * 0.5625);
+    overflow: hidden;
+  }
+  
+  .video-container video {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+  }
