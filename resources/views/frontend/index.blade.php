@@ -10,7 +10,6 @@
   <meta name="description" content="description">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Favicon -->
-  
   <link rel="shortcut icon" href="assets/images/favicon.png" />
   <!-- Plugins CSS -->
   <link rel="stylesheet" href="assets/css/plugins.css">
@@ -324,7 +323,7 @@
       <div class="slideshow slideshow-wrapper pb-section sliderFull">
         <div class="home-slideshow">
               <video src="assets/videos/final-render-1-wp.mp4" autoplay loop muted poster=""></video>
-            
+
         </div>
       </div>
       <!--End Home slider-->
@@ -407,7 +406,7 @@
                             <button class="btn btn-addto-cart" type="button" tabindex="0">Añadir al Carrito</button>
                           </form>
                           <div class="button-set">
-                            
+
                             <div class="wishlist-btn">
                               <a class="wishlist add-to-wishlist" href="/">
                                 <i class="icon anm anm-heart-l"></i>
@@ -454,7 +453,7 @@
 
 
 
-                      
+
                     </div>
                   </div>
                   <div id="tab2" class="tab_content grid-products">
@@ -519,7 +518,7 @@
                             <button class="btn btn-addto-cart" type="button" tabindex="0">Añadir al Carrito</button>
                           </form>
                           <div class="button-set">
-                            
+
                             <div class="wishlist-btn">
                               <a class="wishlist add-to-wishlist" href="/">
                                 <i class="icon anm anm-heart-l"></i>
@@ -627,7 +626,7 @@
                             <button class="btn btn-addto-cart" type="button" tabindex="0">Añadir al Carrito</button>
                           </form>
                           <div class="button-set">
-                            
+
                             <div class="wishlist-btn">
                               <a class="wishlist add-to-wishlist" href="/">
                                 <i class="icon anm anm-heart-l"></i>
@@ -695,42 +694,48 @@
                 </div>
               </a>
             </div>
+
             <div class="collection-grid-item">
-              <a href="/tienda/twinset" class="collection-grid-item__link">
-                <img class="blur-up lazyload" data-src="assets/images/product-images/fotosramacci2/IMG_0341.jpg"
-                  src="assets/images/product-images/fotosramacci2/IMG_0341.jpg" alt="Cosmetic" />
+              <a href="/tienda/cardigan" class="collection-grid-item__link">
+                <img class="blur-up lazyload" data-src="assets/images/product-images/fotosramacci2/IMG_0356.jpg"
+                  src="assets/images/product-images/fotosramacci2/IMG_0356.jpg" alt="Cosmetic" />
                 <div class="collection-grid-item__title-wrapper">
-                  <h3 class="collection-grid-item__title btn btn--secondary no-border">Twim-Set</h3>
+                  <h3 class="collection-grid-item__title btn btn--secondary no-border">Cardigan</h3>
                 </div>
               </a>
             </div>
+
             <div class="collection-grid-item">
-              <a href="/tienda/bufanda" class="collection-grid-item__link">
-                <img class="blur-up lazyload" data-src="assets/images/product-images/fotosramacci2/IMG_0365.jpg"
+              <a href="/tienda/accesorios" class="collection-grid-item__link">
+                <img class="blur-up lazyload" data-src="assets/images/product-images/FotosRamacci/IMG_3667.jpg"
                   src="assets/images/product-images/fotosramacci2/IMG_0365.jpg" alt="Cosmetic" />
                 <div class="collection-grid-item__title-wrapper">
-                  <h3 class="collection-grid-item__title btn btn--secondary no-border">Bufandas</h3>
+                  <h3 class="collection-grid-item__title btn btn--secondary no-border">Accesorios</h3>
                 </div>
               </a>
             </div>
+
             <div class="collection-grid-item">
-              <a href="/tienda/chaleco" class="collection-grid-item__link">
-                <img data-src="assets/images/hombres/chaleco.png" srgc="assets/images/hombres/chaleco.png"
-                  alt="Accessories" class="blur-up lazyload" />
+              <a href="/tienda/caballero" class="collection-grid-item__link">
+                <img data-src="assets/images/product-images/fotosramacci2/hombre.jpg"
+                          src="assets/images/product-images/fotosramacci2/hombre.jpg"
+                  alt="Hombre" class="blur-up lazyload" />
                 <div class="collection-grid-item__title-wrapper">
-                  <h3 class="collection-grid-item__title btn btn--secondary no-border">Chalecos</h3>
+                  <h3 class="collection-grid-item__title btn btn--secondary no-border">Hombres</h3>
                 </div>
               </a>
             </div>
+
             <div class="collection-grid-item">
-              <a href="/tienda/ruana" class="collection-grid-item__link">
+              <a href="/tienda/accesorios/ruana" class="collection-grid-item__link">
                 <img data-src="assets/images/fotosramacci2/IMG_0360.jpg" src="assets/images/fotosramacci2/IMG_0360.jpg"
                   alt="Jewellry" class="blur-up lazyload" />
                 <div class="collection-grid-item__title-wrapper">
-                  <h3 class="collection-grid-item__title btn btn--secondary no-border">Ruanas</h3>
+                  <h3 class="collection-grid-item__title btn btn--secondary no-border">Accesorios Y Ruanas</h3>
                 </div>
               </a>
             </div>
+
             <div class="collection-grid-item">
               <a href="/tienda/pashmina" class="collection-grid-item__link">
                 <img data-src="assets/images/FotosRamacci/IMG_3667.jpg" src="assets/images/FotosRamacci3/IMG_3667.jpg"
@@ -740,7 +745,17 @@
                 </div>
               </a>
             </div>
-          </div>
+
+            <div class="collection-grid-item">
+                <a href="/tienda/remeras" class="collection-grid-item__link">
+                  <img data-src="assets/images/fotosramacci3/IMG_4870.jpg"
+                    src="assets/images/fotosramacci3/IMG_4870.jpg" alt="Fashion"
+                    class="blur-up lazyload" />
+                  <div class="collection-grid-item__title-wrapper">
+                    <h3 class="collection-grid-item__title btn btn--secondary no-border">Remeras</h3>
+                  </div>
+                </a>
+              </div>
         </div>
       </div>
       <!--End Collection Box slider-->
@@ -792,7 +807,7 @@
             <div class="row">
 
             @foreach($productsDestacados as $product)
-            
+
 
               <div class="col-6 col-sm-6 col-md-4 col-lg-4 item grid-view-item style2">
                 <div class="grid-view_image"
@@ -839,7 +854,7 @@
 
                     <!-- product button -->
                     <div class="button-set">
-                      
+
                       <!-- Start product button -->
                       <form class="variants add" action="#" onclick="window.location.href='cart.html'" method="post">
                         <button class="btn cartIcon btn-addto-cart" type="button" tabindex="0"><i
@@ -860,7 +875,7 @@
                   <!-- End product details -->
                 </div>
               </div>
-              
+
             @endforeach
 
 
@@ -935,12 +950,12 @@
       <div class="instagram">
       <h2 class="h2" style="text-align: center; margin-bottom: 20px">Instagram Feed</h2>
         <div class="instagram-content">
-            
+
             <div id="instafeed-container"></div>
 
         </div>
       </div>
-      
+
 
       <!--Store Feature-->
       <div class=" store-feature section">
@@ -1103,7 +1118,7 @@
     <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
     <!--End Scoll Top-->
 
-    
+
 
     <!-- Newsletter Popup -->
     <div class="newsletter-wrap" id="popup-container">

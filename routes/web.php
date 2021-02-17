@@ -18,7 +18,7 @@ Route::get('/', function () {
     $productsSlider1Rebaja = \App\Product::where('in_discounts', 1)->take(8)->get();
 
     foreach ($productsSlider1Dama as $key => $producto) {
-        
+
         $foto = \App\Image::where('product_id', $producto->id)->first();
         if (!empty($foto)) {
             $producto->image = $foto->id;
@@ -26,13 +26,13 @@ Route::get('/', function () {
     }
 
     foreach ($productsSlider1Hombre as $key => $producto) {
-        
+
         $foto = \App\Image::where('product_id', $producto->id)->first();
         $producto->image = $foto->id;
     }
 
     foreach ($productsSlider1Rebaja as $key => $producto) {
-        
+
         $foto = \App\Image::where('product_id', $producto->id)->first();
         $producto->image = $foto->id;
     }
@@ -40,18 +40,18 @@ Route::get('/', function () {
     $productsDestacados = \App\Product::where('in_populars', 1)->take(6)->get();
 
     foreach ($productsDestacados as $key => $producto) {
-        
+
         $foto = \App\Image::where('product_id', $producto->id)->first();
         $producto->image = $foto->id;
     }
 
-    
+
 
     // dd($productsSlider1Dama);
 
 
     return view('frontend.index',[
-        'productsSlider1Dama' => $productsSlider1Dama, 
+        'productsSlider1Dama' => $productsSlider1Dama,
         'productsSlider1Hombre' => $productsSlider1Hombre,
         'productsSlider1Rebaja' => $productsSlider1Rebaja,
         'productsDestacados' => $productsDestacados
@@ -61,13 +61,14 @@ Route::get('/', function () {
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('productos', 'ProductController');
 });
-    Route::get('/productos/{id}/images', 'ProductImageController@index');
-    // Route::post('/productos/{id}/image', 'ProductImageController@store');
-    
-    Route::get('/productoimage/{image_id}', function ($image_id) {
-        $images = \App\Image::find($image_id);
-        return Storage::download($images->src);
-    });
+
+Route::get('/productos/{id}/images', 'ProductImageController@index');
+// Route::post('/productos/{id}/image', 'ProductImageController@store');
+
+Route::get('/productoimage/{image_id}', function ($image_id) {
+    $images = \App\Image::find($image_id);
+    return Storage::download($images->src);
+});
 
 Route::get('/detalle{id}','ProductController@show');
 
