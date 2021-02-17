@@ -57,6 +57,7 @@
             </a>
           </div>
           <!--End Desktop Logo-->
+
           <div class="col-2 col-sm-3 col-md-3 col-lg-8">
             <div class="d-block d-lg-none">
               <button type="button" class="btn--link site-header__menu js-mobile-nav-toggle mobile-nav--open">
@@ -127,6 +128,7 @@
             </nav>
             <!--End Desktop Menu-->
           </div>
+
           <div class="col-6 col-sm-6 col-md-6 col-lg-2 d-block d-lg-none mobile-logo">
             <div class="logo">
               <a href="/">
@@ -134,6 +136,7 @@
               </a>
             </div>
           </div>
+
           <div class="col-4 col-sm-3 col-md-3 col-lg-2">
             <div class="site-cart">
               <a href="#;" class="site-header__cart" title="Cart">
@@ -215,10 +218,12 @@
             </div>
             -->
           </div>
+
         </div>
       </div>
     </div>
     <!--End Header-->
+
     <!--Mobile Menu-->
     <div class="mobile-nav-wrapper" role="navigation">
       <div class="closemobileMenu"><i class="icon anm anm-times-l pull-right"></i> Cerrar Menu</div>

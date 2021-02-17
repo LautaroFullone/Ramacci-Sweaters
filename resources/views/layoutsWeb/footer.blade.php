@@ -73,6 +73,7 @@
                 <li><a href="/contacto">Contacto</a></li>
                 <li><a href="/">Pedidos y devolucioness</a></li>
                 <li><a href="/">Centro de Apoyo</a></li>
+                <li><a href="/" data-toggle="modal" data-target="#info" >Envío &amp; Devoluciones</a></li>
               </ul>
             </div>
             <div class="col-12 col-sm-12 col-md-3 col-lg-3 contact-box">
@@ -121,3 +122,81 @@
       </div>
     </div>
   </footer>
+
+  <!--MODAL-->
+
+  <div class="modal fade" id="info">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Envío &amp; Devoluciones</h2>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h5>Política de devoluciones</h5>
+                En Ramacci tenemos una política clara y flexible de cambios con el fin de que nuestras clientas
+                puedan realizar la compra de modo confiado.En el caso de que el/la cliente/a no se encuentre
+                conforme con el Producto adquirido, siempre podrá cambiarlo por cualquier otro producto de igual
+                valor o varios productos que equivalgan o superen al valor del comprado (La diferencia, será
+                abonada por el cliente al momento del cambio) No se permite la modalidad de cambio de producto
+                por el mismo modelo y mismo talle, salvo que el cambio se deba a un defecto del producto. <br>
+
+                Habitualmente los cambios pueden ser realizados en cualquier local exclusivo de la marca dentro de
+                los 30 días corridos de la fecha de compra. Deberá presentar ticket de compra y los productos deben
+                estar en perfecto estado y con todas las etiquetas originales. Listado de locales exclusivos ver
+                en www.ver.com.ar/localesver/
+                Dadas la situación de público conocimiento extendemos el plazo de cambios a 60 dias. <br>
+
+                En el caso de optar por un cambio o devolución (solo por falla del producto) en el domicilio del
+                cliente este tendrá que comunicarse a ventasonline@ver.com.ar dentro de los 10 días corridos de
+                haber efectuado la compra, donde será asesorado sobre la gestión de lunes a viernes de 8hs a 17hs.
+                <br><br>
+                <h5>Envío</h5>
+                El valor y el plazo de envío varían segun la dirección de entrega. ES PRIMORDIAL QUE INGRESES DATOS CORRECTOS ya que es tu responsabilidad informar donde debe llegar el producto. Nuestros productos se despachan dentro de los 10 (diez) días hábiles posteriores a la acreditación de tu pago. Todos los costos de envío que suceden por compras dentro de RAMACCI.COM.AR corren por cuenta exclusiva de nuestros clientes, excepto aclaración expresa en contrario (por ejemplo, en el caso de promociones).
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="hide">
+    <div id="productInquiry">
+      <div class="contact-form form-vertical">
+        <div class="page-title">
+          <h3>Hola</h3>
+        </div>
+        <form method="post" action="#" id="contact_form" class="contact-form">
+          <div class="formFeilds">
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                <input type="text" id="ContactFormName" name="contact[name]" placeholder="Name" value="" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                <input type="email" id="ContactFormEmail" name="contact[email]" placeholder="Email"
+                  autocapitalize="off" value="" required>
+              </div>
+              <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                <input required type="tel" id="ContactFormPhone" name="contact[phone]" pattern="[0-9\-]*"
+                  placeholder="Phone Number" value="">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                <textarea required rows="10" id="ContactFormMessage" name="contact[body]"
+                  placeholder="Message"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                <input type="submit" class="btn" value="Send Message">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

@@ -16,22 +16,13 @@ class ProductController extends Controller
     public function index()
     {
         $productos = Product::orderBy('created_at', 'desc')->paginate(500);
-        
-
-        
 
         foreach ($productos as $key => $producto) {
             $foto = Image::where('product_id', $producto->id)->first();
-            if($foto != null) { 
+            if($foto != null) {
                 $producto->image = $foto->id;
             }
-            
         }
-
-        // dd($productos);
-
-        
-
         return view('backend.index', ['products' => $productos]);
     }
 
@@ -49,27 +40,22 @@ class ProductController extends Controller
         foreach ($todoslosproductos as $producto) {
 
             if (isset($producto->old_price) && isset($producto->price)) {
-            
                 $producto->price_dif = $producto->old_price - $producto->price;
-    
                 $producto->price_saving = intval($producto->price_dif / $producto->old_price * 100);
-                
             }
-            
+
             $foto = Image::where('product_id', $producto->id)->first();
 
             if (!empty($foto)) {
                 $producto->image = $foto->id;
             }
-
             $producto->rating_rounded = round($producto->rating);
-
         }
 
         $productsDestacados = \App\Product::where('in_populars', 1)->take(4)->get();
 
         foreach ($productsDestacados as $key => $producto) {
-        
+
             $foto = \App\Image::where('product_id', $producto->id)->first();
             $producto->image = $foto->id;
         }
@@ -93,9 +79,9 @@ class ProductController extends Controller
     {
         // dd($request);
 
-        
+
         $producto = new Product;
-        
+
         $producto->code = $request->code;
         $producto->name = $request->name;
         $producto->description = $request->description;
@@ -106,19 +92,19 @@ class ProductController extends Controller
         $producto->stock = $request->stock;
         $producto->price = $request->price;
         $producto->old_price = $request->old_price;
-        
+
         /*
         $producto->amount_sold = 0;
         $producto->rating = 0;
         $producto->amount_rates = 0;
         */
-        
+
         $producto->has_size_1 = ($request->has_size_1=='on') ? true : false;
         $producto->has_size_2 = ($request->has_size_2=='on') ? true : false;
         $producto->has_size_3 = ($request->has_size_3=='on') ? true : false;
         $producto->has_size_4 = ($request->has_size_4=='on') ? true : false;
         $producto->has_size_5 = ($request->has_size_5=='on') ? true : false;
-        
+
         $producto->show = ($request->show=='on') ? true : false;
         $producto->in_slide = ($request->in_slide=='on') ? true : false;
         $producto->in_novelties = ($request->in_novelties=='on') ? true : false;
@@ -130,7 +116,7 @@ class ProductController extends Controller
         $productoid = Product::latest('id')->first();
 
         return redirect('/productos/'.$productoid->id.'/edit')->with('alert', 'Artículo creado');
- 
+
     }
 
     /**
@@ -147,11 +133,11 @@ class ProductController extends Controller
 
 
         if (isset($producto->old_price) && isset($producto->price)) {
-            
+
             $producto->price_dif = $producto->old_price - $producto->price;
 
             $producto->price_saving = intval($producto->price_dif / $producto->old_price * 100);
-            
+
         }
 
         $producto->description_array = explode("\n", $producto->description);
@@ -166,25 +152,25 @@ class ProductController extends Controller
         }
 
         foreach ($relacionados as $key => $prod) {
-        
+
             $foto = Image::where('product_id', $prod->id)->first();
             if (!empty($foto)) {
                 $prod->image = $foto->id;
             }
 
             if (isset($prod->old_price) && isset($prod->price)) {
-            
+
                 $prod->price_dif = $prod->old_price - $prod->price;
-    
+
                 $prod->price_saving = intval($prod->price_dif / $prod->old_price * 100);
-                
+
             }
         }
 
         // dd($relacionados);
 
         //dd(is_array($relacionados));
-        
+
 
         return view('frontend.detail', ['product' => $producto, 'images' => $fotos, 'related' => $relacionados]);
     }
@@ -197,24 +183,24 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        $producto = Product::find($id); 
+        $producto = Product::find($id);
 
         $fotos = Image::where('product_id', $id)->take(3)->get();
 
         // dd($fotos[0]->id);
 
-        
 
-        
+
+
 
         if ($fotos != null) {
             return view('backend.detail', ['product' => $producto, 'images' => $fotos]);
         } else {
             return view('backend.detail', ['product' => $producto]);
         }
-        
-               
-        
+
+
+
     }
 
     /**
@@ -240,13 +226,13 @@ class ProductController extends Controller
         $producto->stock = $request->stock;
         $producto->price = $request->price;
         $producto->old_price = $request->old_price;
-        
+
         $producto->has_size_1 = ($request->has_size_1=='on') ? true : false;
         $producto->has_size_2 = ($request->has_size_2=='on') ? true : false;
         $producto->has_size_3 = ($request->has_size_3=='on') ? true : false;
         $producto->has_size_4 = ($request->has_size_4=='on') ? true : false;
         $producto->has_size_5 = ($request->has_size_5=='on') ? true : false;
-        
+
         $producto->show = ($request->show=='on') ? true : false;
         $producto->in_slide = ($request->in_slide=='on') ? true : false;
         $producto->in_novelties = ($request->in_novelties=='on') ? true : false;
@@ -274,7 +260,7 @@ class ProductController extends Controller
         $fotos->delete();
 
         $producto->delete();
-        
+
         return redirect('/productos');
     }
 }
