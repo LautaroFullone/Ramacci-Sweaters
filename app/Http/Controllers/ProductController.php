@@ -16,15 +16,32 @@ class ProductController extends Controller
     public function index()
     {
         $productos = Product::orderBy('created_at', 'desc')->paginate(500);
+<<<<<<< Updated upstream
+=======
+
+
+
+>>>>>>> Stashed changes
 
         foreach ($productos as $key => $producto) {
             $foto = Image::where('product_id', $producto->id)->first();
             if($foto != null) {
                 $producto->image = $foto->id;
             }
+<<<<<<< Updated upstream
         }
+=======
+
+        }
+
+        // dd($productos);
+
+
+
+>>>>>>> Stashed changes
         return view('backend.index', ['products' => $productos]);
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -40,8 +57,16 @@ class ProductController extends Controller
         foreach ($todoslosproductos as $producto) {
 
             if (isset($producto->old_price) && isset($producto->price)) {
+<<<<<<< Updated upstream
                 $producto->price_dif = $producto->old_price - $producto->price;
                 $producto->price_saving = intval($producto->price_dif / $producto->old_price * 100);
+=======
+
+                $producto->price_dif = $producto->old_price - $producto->price;
+
+                $producto->price_saving = intval($producto->price_dif / $producto->old_price * 100);
+
+>>>>>>> Stashed changes
             }
 
             $foto = Image::where('product_id', $producto->id)->first();

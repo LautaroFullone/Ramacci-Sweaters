@@ -257,6 +257,7 @@
                 </div>
             </div>
         </div>
+<<<<<<< Updated upstream
         <!--End Header-->
         <!--Mobile Menu-->
         <div class="mobile-nav-wrapper" role="navigation">
@@ -267,6 +268,28 @@
                         <li><a href="/nosotros" class="site-nav">Nosotros</a></li>
                         <li><a href="/faqs" class="site-nav">FAQs</a></li>
                     </ul>
+=======
+        <!--End Breadcrumb-->
+
+        <div id="ProductSection-product-template" class="product-template__container prstyle1 container">
+          <!--product-single-->
+          <div class="product-single">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="product-details-img">
+                  <div class="product-thumb">
+                    <div id="gallery" class="product-dec-slider-2 product-tab-left">
+
+                    @foreach($images ?? '' as $image)
+
+                      <a data-image="/productoimage/{{ $image->id }}"
+                        data-zoom-image="/productoimage/{{ $image->id }}"
+                        class="slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" tabindex="-1">
+                        <img class="blur-up lazyload" src="/productoimage/{{ $image->id }}"
+                          alt="" />
+                      </a>
+
+>>>>>>> Stashed changes
 
                 </li>
                 <li class="lvl1 parent megamenu"><a href="/tienda">Tienda <i class=""></i></a>
@@ -380,9 +403,15 @@
                                     </div>
                                     <div class="lightboximages">
 
+<<<<<<< Updated upstream
                                         @foreach ($images as $image)
                                             <a href="/productoimage/{{ $image->id }}" data-size="1462x2048"></a>
                                         @endforeach
+=======
+                    @foreach($images ?? '' as $image)
+                    <a href="/productoimage/{{ $image->id }}" data-size="1462x2048"></a>
+                    @endforeach
+>>>>>>> Stashed changes
 
                                     </div>
 
@@ -771,6 +800,7 @@
 
         <!--Footer-->
         @include('layoutsWeb.footer')
+<<<<<<< Updated upstream
         <!--End Footer-->
 
         <!--Scoll Top-->
@@ -918,6 +948,150 @@
                             </div>
                         </div>
                     </form>
+=======
+    <!--End Footer-->
+
+    <!--Scoll Top-->
+    <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
+    <!--End Scoll Top-->
+
+    <div class="hide">
+      <div id="sizechart">
+        <h3>WOMEN'S BODY SIZING CHART</h3>
+        <table>
+          <tbody>
+            <tr>
+              <th>Talla</th>
+              <th>XS</th>
+              <th>S</th>
+              <th>M</th>
+              <th>L</th>
+              <th>XL</th>
+            </tr>
+            <tr>
+              <td>Chest</td>
+              <td>31" - 33"</td>
+              <td>33" - 35"</td>
+              <td>35" - 37"</td>
+              <td>37" - 39"</td>
+              <td>39" - 42"</td>
+            </tr>
+            <tr>
+              <td>Cintura</td>
+              <td>24" - 26"</td>
+              <td>26" - 28"</td>
+              <td>28" - 30"</td>
+              <td>30" - 32"</td>
+              <td>32" - 35"</td>
+            </tr>
+            <tr>
+              <td>Cadera</td>
+              <td>34" - 36"</td>
+              <td>36" - 38"</td>
+              <td>38" - 40"</td>
+              <td>40" - 42"</td>
+              <td>42" - 44"</td>
+            </tr>
+            <tr>
+              <td>Entrepierna regular</td>
+              <td>30"</td>
+              <td>30½"</td>
+              <td>31"</td>
+              <td>31½"</td>
+              <td>32"</td>
+            </tr>
+            <tr>
+              <td>Long (Tall) Inseam</td>
+              <td>31½"</td>
+              <td>32"</td>
+              <td>32½"</td>
+              <td>33"</td>
+              <td>33½"</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>MEN'S BODY SIZING CHART</h3>
+        <table>
+          <tbody>
+            <tr>
+              <th>Talla</th>
+              <th>XS</th>
+              <th>S</th>
+              <th>M</th>
+              <th>L</th>
+              <th>XL</th>
+              <th>XXL</th>
+            </tr>
+            <tr>
+              <td>Chest</td>
+              <td>33" - 36"</td>
+              <td>36" - 39"</td>
+              <td>39" - 41"</td>
+              <td>41" - 43"</td>
+              <td>43" - 46"</td>
+              <td>46" - 49"</td>
+            </tr>
+            <tr>
+              <td>Cintura</td>
+              <td>27" - 30"</td>
+              <td>30" - 33"</td>
+              <td>33" - 35"</td>
+              <td>36" - 38"</td>
+              <td>38" - 42"</td>
+              <td>42" - 45"</td>
+            </tr>
+            <tr>
+              <td>Cadera</td>
+              <td>33" - 36"</td>
+              <td>36" - 39"</td>
+              <td>39" - 41"</td>
+              <td>41" - 43"</td>
+              <td>43" - 46"</td>
+              <td>46" - 49"</td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="padding-left: 30px;"><img src="assets/images/size.jpg" alt=""></div>
+      </div>
+    </div>
+    <div class="hide">
+      <div id="productInquiry">
+        <div class="contact-form form-vertical">
+          <div class="page-title">
+            <h3>Camelia Reversible Jacket</h3>
+          </div>
+          <form method="post" action="{{route('mail')}}" id="contact_form" class="contact-form">
+            @csrf
+            <input type="hidden" name="form_type" value="contact" />
+            <input type="hidden" name="utf8" value="✓" />
+            <div class="formFeilds">
+              <input type="hidden" name="contact[product name]" value="Camelia Reversible Jacket">
+              <input type="hidden" name="contact[product link]" value="/products/camelia-reversible-jacket-black-red">
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                  <input type="text" id="ContactFormName" name="name" placeholder="Name" value="" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                  <input type="email" id="ContactFormEmail" name="email" placeholder="Email"
+                    autocapitalize="off" value="" required>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                  <input required type="tel" id="ContactFormPhone" name="phone" pattern="[0-9\-]*"
+                    placeholder="Phone Number" value="">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                  <textarea required rows="10" id="ContactFormMessage" name="body"
+                    placeholder="Message"></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                  <input type="submit" class="btn" value="Send Message">
+>>>>>>> Stashed changes
                 </div>
             </div>
         </div>
