@@ -14,6 +14,7 @@
 .image-container {
   overflow: hidden;
   margin-left: 20px;
+  max-height: 400px;
 }
 .image-container img {
   width: 100%;

@@ -22,10 +22,16 @@
         <div class="item-text">Slide</div>
       </div>
     </a>
-    <a href="/logout">
+    <a href="/">
+      <div class="menu-item">
+        <i class="fa fa-desktop"></i>
+        <div class="item-text">Ir al sitio</div>
+      </div>
+    </a>
+    <a href="/logout" onclick="return confirm('¿Cerrar sesión?')">
       <div class="menu-item">
         <i class="fa fa-reply"></i>
-        <div class="item-text">Salir</div>
+        <div class="item-text">Cerrar sesión</div>
       </div>
     </a>
     

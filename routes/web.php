@@ -20,7 +20,9 @@ Route::get('/', function () {
     foreach ($productsSlider1Dama as $key => $producto) {
         
         $foto = \App\Image::where('product_id', $producto->id)->first();
-        $producto->image = $foto->id;
+        if (!empty($foto)) {
+            $producto->image = $foto->id;
+        }
     }
 
     foreach ($productsSlider1Hombre as $key => $producto) {
@@ -56,8 +58,9 @@ Route::get('/', function () {
         ]);
 });
 
-// Route::group(['middleware' => 'auth'], function () {
+Route::group(['middleware' => 'auth'], function () {
     Route::resource('productos', 'ProductController');
+});
     Route::get('/productos/{id}/images', 'ProductImageController@index');
     // Route::post('/productos/{id}/image', 'ProductImageController@store');
     
@@ -65,16 +68,28 @@ Route::get('/', function () {
         $images = \App\Image::find($image_id);
         return Storage::download($images->src);
     });
-// });
 
 Route::get('/detalle{id}','ProductController@show');
 
 
 Route::get('/tienda/{filtro1?}/{filtro2?}', 'ProductController@shop_index');
 
+Route::get('/nosotros', function () {
+    return view('frontend.about-us');
+});
+
+Route::get('/faqs', function () {
+    return view('frontend.faqs');
+});
+
+Route::get('/blog', function () {
+    return view('frontend.blog');
+});
+
 Route::get('/contacto', function () {
     return view('frontend.contact');
 });
+
 
 
 

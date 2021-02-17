@@ -343,7 +343,7 @@
                 <option @if ($product['collection_season'] == 'oto-inv') selected @endif value="oto-inv">Otoño - Invierno</option>
                 <option @if ($product['collection_season'] == 'prim-ver') selected @endif value="dama">Primavera - Verano</option>
               </select>
-              <input type="number" name="season" value="{{$product['collection_year']}}">
+              <input type="number" name="collection_year" value="{{$product['collection_year']}}">
             </div>
           </div>
           
@@ -356,7 +356,7 @@
             <label for="">Precio actual</label>
             <input type="text" name="price" value="{{$product['price']}}">
             <label for="">Precio anterior</label>
-            <input type="text" name="old_price">
+            <input type="text" name="old_price" value="{{$product['old_price']}}">
           </div>
           <div class="border-right">
             <label for="" class="label-size">Talle(s)</label>
@@ -532,5 +532,13 @@ $(document).on('click', '.delete-button', function(e) {
 
 
 </script>
+
+<script>
+    var msg = '{{Session::get('alert')}}';
+    var exist = '{{Session::has('alert')}}';
+    if(exist){
+      alert(msg);
+    }
+  </script>
 </body>
 </html>

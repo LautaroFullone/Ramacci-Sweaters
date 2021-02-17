@@ -47,10 +47,20 @@ class ProductController extends Controller
         $todoslosproductos = Product::all();
 
         foreach ($todoslosproductos as $producto) {
+
+            if (isset($producto->old_price) && isset($producto->price)) {
+            
+                $producto->price_dif = $producto->old_price - $producto->price;
+    
+                $producto->price_saving = intval($producto->price_dif / $producto->old_price * 100);
+                
+            }
             
             $foto = Image::where('product_id', $producto->id)->first();
 
-            $producto->image = $foto->id;
+            if (!empty($foto)) {
+                $producto->image = $foto->id;
+            }
 
             $producto->rating_rounded = round($producto->rating);
 
@@ -117,9 +127,10 @@ class ProductController extends Controller
 
         $producto->save();
 
-        return redirect('/productos');
+        $productoid = Product::latest('id')->first();
+
+        return redirect('/productos/'.$productoid->id.'/edit')->with('alert', 'Artículo creado');
  
-        // return $this->edit($id);   Para que redirija a la vista detail (para cargar imagenes). Pero necesito el $id
     }
 
     /**
@@ -147,12 +158,35 @@ class ProductController extends Controller
 
         $fotos = \App\Image::where('product_id', $id)->get();
 
-        // dd($fotos[0]->src);
 
+        if ($producto->in_discounts == 1) {
+            $relacionados = Product::where('in_discounts', 1)->where('id', '<>', $id)->take(10)->get();
+        } else {
+            $relacionados = Product::where('category', $producto->category)->where('id', '<>', $id)->take(10)->get();
+        }
+
+        foreach ($relacionados as $key => $prod) {
         
+            $foto = Image::where('product_id', $prod->id)->first();
+            if (!empty($foto)) {
+                $prod->image = $foto->id;
+            }
+
+            if (isset($prod->old_price) && isset($prod->price)) {
+            
+                $prod->price_dif = $prod->old_price - $prod->price;
+    
+                $prod->price_saving = intval($prod->price_dif / $prod->old_price * 100);
+                
+            }
+        }
+
+        // dd($relacionados);
+
+        //dd(is_array($relacionados));
         
 
-        return view('frontend.detail', ['product' => $producto, 'images' => $fotos]);
+        return view('frontend.detail', ['product' => $producto, 'images' => $fotos, 'related' => $relacionados]);
     }
 
     /**
@@ -192,6 +226,8 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
+        // dd($request);
+
         $producto = Product::find($id);
 
         $producto->code = $request->code;
@@ -219,7 +255,8 @@ class ProductController extends Controller
 
         $producto->save();
 
-        return redirect('/productos');
+
+        return redirect('/productos/'.$producto->id.'/edit')->with('alert', 'Cambios guardados');
     }
 
     /**

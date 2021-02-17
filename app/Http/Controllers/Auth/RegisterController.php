@@ -70,4 +70,15 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+
+    public function redirectTo()
+    {
+        if (auth()->user()->is_admin) {
+            return '/productos';
+        } else if (auth()->user()->is_authenticated) {
+            return '/productos';
+        } else {
+            return '/';
+        }
+    }
 }
