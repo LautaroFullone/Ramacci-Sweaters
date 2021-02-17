@@ -35,7 +35,7 @@
     <!--End Top Header-->
     <!--Header-->
     <div class="header-wrap animated d-flex">
-    	<div class="container-fluid">        
+    	<div class="container-fluid">
             <div class="row align-items-center">
             	<!--Desktop Logo-->
                 <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
@@ -111,7 +111,7 @@
                       </li>
                       <li class="lvl1"><a href="https://api.whatsapp.com/send?phone=5492234551266&text=Hola%20!%20quisiera%20realizar%20una%20consulta.%20Muchas%20Gracias"><b>WhatsApp</b> <i class="anm anm-angle-down-l"></i></a></li>
                     </ul>
-                  </nav>                	
+                  </nav>
                     <!--End Desktop Menu-->
                 </div>
                 <div class="col-6 col-sm-6 col-md-6 col-lg-2 d-block d-lg-none mobile-logo">
@@ -189,7 +189,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!--End Minicart Popup-->	
+                        <!--End Minicart Popup-->
                     </div>
                     <div class="site-header__search">
                     	<button type="button" class="search-trigger"><i class="icon anm anm-search-l"></i></button>
@@ -248,7 +248,7 @@
       </ul>
     </div>
 	<!--End Mobile Menu-->
-    
+
     <!--Body Content-->
     <div id="page-content">
     	<!--Page Title-->
@@ -258,7 +258,7 @@
       		</div>
 		</div>
         <!--End Page Title-->
-        
+
         <div class="container">
         	<div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 main-col">
@@ -267,7 +267,7 @@
                         <div class="rte-setting">
                             <p><strong>Ramacci es una marca Argentina, nacida en el año 1996, en Mar del Plata.
                               Nuestra amplia experiencia nos permite ofrecer, tanto al mercado local como al internacional, prendas de punta, dedicadas a la mujer actual y al caballero elegante.</strong></p>
-                            
+
                         </div>
                     </div>
                	</div>
@@ -281,12 +281,12 @@
             	<div class="col-12">
                     <h2>Nuestros Productos</h2>
                     <p>Una colección de la más alta calidad y comodidad caracterizan nuestro más amplia propuesta de prendas creadas especialmente para satisfacer la necesidad del hombre  y la mujer actual. <br> Hermosos diseños pensados para ser el complemento perfecto de nuestras más lujosas prendas. <br> Desarrollamos productos ligeros perfectos para los días de primavera o prendas abrigadas para las noches de invierno manteniendo la tranquilidad de lucir una prenda clásica que une al hombre y la mujer con la naturaleza.</p>
-                   <p> </p> 
                    <p> </p>
-                    
+                   <p> </p>
+
                 </div>
             </div>
-            
+
             <div class="row">
             	<div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-4">
                 	<h2 class="h2">Acerca de Ramacci Sweaters</h2>
@@ -299,7 +299,8 @@
                 	<h2 class="h2">Contactanos</h2>
                     <ul class="addressFooter">
                         <li><i class="icon anm anm-map-marker-al"></i><p>Dirección: Av Juan B. Justo 1335</p></li>
-                        <li class="phone"><i class="icon anm anm-phone-s"></i><p>Teléfono: (0223) 489-0176</p></li>
+                        <li class="phone"><i class="icon anm anm-phone-s"></i><p>Teléfono: (223) 489-0176</p></li>
+                        <li class="phone"><i class="icon anm anm-phone-s"></i></i><p>Celular: (223) 223-6849431</p></li>
                         <li class="email"><i class="icon anm anm-envelope-l"></i><p>Email: info@ramacci.com.ar</p></li>
                     </ul>
                     <hr />
@@ -314,131 +315,22 @@
                     </ul>
                 </div>
             </div>
-            
-            
+
+
         </div>
-        
+
     </div>
     <!--End Body Content-->
-    
+
     <!--Footer-->
-    <footer id="footer">
-        <div class="newsletter-section">
-            <div class="container">
-                <div class="row">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-7 w-100 d-flex justify-content-start align-items-center">
-                            <div class="display-table">
-                                <div class="display-table-cell footer-newsletter">
-                                    <div class="section-header text-center">
-                                        <label class="h2"><span>Recibir </span>Novedades</label>
-                                    </div>
-                                    <form action="#" method="post">
-                                        <div class="input-group">
-                                            <input type="email" class="input-group__field newsletter__input" name="EMAIL" value="" placeholder="Email address" required="">
-                                            <span class="input-group__btn">
-                                                <button type="submit" class="btn newsletter__submit" name="commit" id="Subscribe"><span class="newsletter__submit-text--large">Suscribite</span></button>
-                                            </span>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-5 d-flex justify-content-end align-items-center">
-                            <div class="footer-social">
-                                <ul class="list--inline site-footer__social-icons social-icons">
-                                    <li><a class="social-icons__link" href="/" target="_blank" title="Ramacci Facebook"><i class="icon icon-facebook"></i></a></li>
-                                    <!--<li><a class="social-icons__link" href="#" target="_blank" title="Ramacci Twitter"><i class="icon icon-twitter"></i> <span class="icon__fallback-text">Twitter</span></a></li>-->
-                                    <!--<li><a class="social-icons__link" href="#" target="_blank" title="Ramacci Pinterest"><i class="icon icon-pinterest"></i> <span class="icon__fallback-text">Pinterest</span></a></li>-->
-                                    <li><a class="social-icons__link" href="/" target="_blank" title="Ramacci Instagram"><i class="icon icon-instagram"></i> <span class="icon__fallback-text">Instagram</span></a></li>
-                                    <!--<li><a class="social-icons__link" href="#" target="_blank" title="Ramacci Tumblr"><i class="icon icon-tumblr-alt"></i> <span class="icon__fallback-text">Tumblr</span></a></li>-->
-                                    <li><a class="social-icons__link" href="/" target="_blank" title="Ramacci YouTube"><i class="icon icon-youtube"></i> <span class="icon__fallback-text">YouTube</span></a></li>
-                                    <!--<li><a class="social-icons__link" href="#" target="_blank" title="Ramacci Vimeo"><i class="icon icon-vimeo-alt"></i> <span class="icon__fallback-text">Vimeo</span></a></li>-->
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-            </div>    
-        </div>
-        <div class="site-footer">
-        	<div class="container">
-     			<!--Footer Links-->
-           <div class="footer-top">
-            <div class="row">
-              <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
-                <h4 class="h4">Artículos</h4>
-                <ul>
-                  <li><a href="/tienda/dama">Dama</a></li>
-                  <li><a href="/tienda/caballero">Hombre</a></li>
-                  <li><a href="/tienda/sweater">Sweaters</a></li>
-                  <li><a href="/tienda/accesorios">Accesorios</a></li>
-                  <li><a href="/tienda/pashmina">Pashminas</a></li>
-                </ul>
-              </div>
-              <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
-                <h4 class="h4">Informacion</h4>
-                <ul>
-                  <li><a href="/nosotros">Nosotros</a></li>
-                  <li><a href="/">Blog</a></li>
-                  <li><a href="/">FAQs</a></li>
-                  <li><a href="/"> </a></li>
-                  <li><a href="/productos">Mi Cuenta</a></li>
-                </ul>
-              </div>
-              <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
-                <h4 class="h4">Servicios al cliente</h4>
-                <ul>
-                  <li><a href="/">Solicitar datos personales</a></li>
-                  <li><a href="/"> FAQs</a></li>
-                  <li><a href="/contacto">Contacto</a></li>
-                  <li><a href="/">Pedidos y devolucioness</a></li>
-                  <li><a href="/">Centro de Apoyo</a></li>
-                </ul>
-              </div>
-              <div class="col-12 col-sm-12 col-md-3 col-lg-3 contact-box">
-                <h4 class="h4">Contacto</h4>
-                <ul class="addressFooter">
-                  <li><i class="icon anm anm-map-marker-al"></i>
-                    <p>Av Juan B. Justo <br>1335, Mar del Plata</p>
-                  </li>
-                  <li class="phone"><i class="icon anm anm-phone-s"></i>
-                    <p>(223) 489-0176</p>
-                  </li>
-                  <li class="email"><i class="icon anm anm-envelope-l"></i>
-                    <p>info@ramacci.com.ar</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-                <!--End Footer Links-->
-                <hr>
-                <div class="footer-bottom">
-                	<div class="row">
-                    	<!--Footer Copyright-->
-	                	<div class="col-12 col-sm-12 col-md-6 col-lg-6 order-1 order-md-0 order-lg-0 order-sm-1 copyright text-sm-center text-md-left text-lg-left"><span></span> <a href="https://temberweb.com/" target="_blank">Design by Tember</a></div>
-                        <!--End Footer Copyright-->
-                        <!--Footer Payment Icon-->
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 order-0 order-md-1 order-lg-1 order-sm-0 payment-icons text-right text-md-center">
-                        	<ul class="payment-icons list--inline">
-                        		<li><i class="icon fa fa-cc-visa" aria-hidden="true"></i></li>
-                                <li><i class="icon fa fa-cc-mastercard" aria-hidden="true"></i></li>
-                                <!--<li><i class="icon fa fa-cc-discover" aria-hidden="true"></i></li>-->
-                                <!--<li><i class="icon fa fa-cc-paypal" aria-hidden="true"></i></li>-->
-                                <li><i class="icon fa fa-cc-amex" aria-hidden="true"></i></li>
-                                <li><i class="icon fa fa-credit-card" aria-hidden="true"></i></li>
-                            </ul>
-                        </div>
-                        <!--End Footer Payment Icon-->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+        @include('layoutsWeb.footer')
     <!--End Footer-->
+
     <!--Scoll Top-->
     <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
     <!--End Scoll Top-->
-    
+
+
      <!-- Including Jquery -->
      <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
      <script src="assets/js/vendor/jquery.cookie.js"></script>
