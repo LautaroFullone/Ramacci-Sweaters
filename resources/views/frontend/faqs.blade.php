@@ -292,9 +292,10 @@
               </div>
               <div class="faq-body">
                 <h4 class="panel-title" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
-                  aria-controls="collapseTwo">Formas de pago.</h4>
-                <div id="collapseTwo" class="collapse panel-content">El pago del pedido en el shop online se efectúa
-                  mediante tarjeta de crédito o débito. Ramacci posee un sistema de cobranza a través de tarjeta de
+                  aria-controls="collapseTwo">Formas de pago</h4>
+                <div id="collapseTwo" class="collapse panel-content">El pago del pedido en el shop online se puede efectuar
+                  de diversas maneras, entre ellas: Cuenta DNI, Mercado Pago, QR, Transferencia Bancaria o mediante tarjetas,
+                  ya sea de crédito o débito. En caso de utilizar este ultimo metodo, Ramacci posee un sistema de cobranza a través de tarjeta de
                   crédito y débito que es 100% seguro. Los números son encriptados y no sufren ningún tipo de amenaza en
                   nuestro banco de datos, siendo enviados directamente a la administradora de la tarjeta de crédito.
                 </div>
