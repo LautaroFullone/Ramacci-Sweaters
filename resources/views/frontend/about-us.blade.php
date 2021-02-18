@@ -273,8 +273,8 @@
                	</div>
             </div>
             <div class="row">
-            	<div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4"><img class="blur-up lazyload" data-src="assets/images/nosotrosrama.png" src="assets/images/nosotrosrama.png" alt="About Us" /></div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4"><img class="blur-up lazyload" data-src="assets/images/FondoRamacci.jpg" src="assets/images/FondoRamacci.jpg" alt="About Us" /></div>
+            	<div style="height:254px; overflow:hidden;" class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4"><img style="weight: 100%" class="blur-up lazyload" data-src="assets/images/IMG_9141.jpg" src="assets/images/nosotrosrama.png" alt="About Us" /></div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4"><img class="blur-up lazyload" data-src="assets/images/IMG_9191.jpg" src="assets/images/FondoRamacci.jpg" alt="About Us" /></div>
                 <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4"><img class="blur-up lazyload" data-src="assets/images/guemes.jpg" src="assets/images/guemes.jpg" alt="About Us" /></div>
             </div>
             <div class="row">
