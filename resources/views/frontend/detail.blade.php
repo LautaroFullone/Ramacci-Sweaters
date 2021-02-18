@@ -553,8 +553,8 @@
                                     </div>
 
                                     <p class="infolinks"><a href="#sizechart" class="sizelink btn"> Guia de tallas</a>
-                                        <a href="#productInquiry" class="emaillink btn"> Pregunte acerca de este
-                                            producto</a></p>
+                                        <button class="btn btn-primary" type="button" data-toggle="modal"  data-target="#mail">Pregunte acerca de este
+                                            producto</button> </p>
 
                                     <!-- Product Action -->
                                     <div class="product-action clearfix">
@@ -876,56 +876,61 @@
                 <div style="padding-left: 30px;"><img src="assets/images/size.jpg" alt=""></div>
             </div>
         </div>
-        <div class="hide">
-            <div id="productInquiry">
-                <div class="contact-form form-vertical">
-                    <div class="page-title">
-                        <h3>Camelia Reversible Jacket</h3>
-                    </div>
-                    <form method="post" action="{{route('mail')}}" id="contact_form" class="contact-form">
-                        @csrf
-                        <input type="hidden" name="form_type" value="contact" />
-                        <input type="hidden" name="utf8" value="✓" />
-
-                        <div class="formFeilds">
-                            <input type="hidden" name="contact[product name]" value="Camelia Reversible Jacket">
-                            <input type="hidden" name="contact[product link]"
-                                value="/products/camelia-reversible-jacket-black-red">
-
-                            <div class="row">
-                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                                    <input type="text" id="ContactFormName" name="name" placeholder="Name"
-                                        value="" required>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                                    <input type="email" id="ContactFormEmail" name="email" placeholder="Email"
-                                        autocapitalize="off" value="" required>
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                                    <input required type="tel" id="ContactFormPhone" name="phone"
-                                        pattern="[0-9\-]*" placeholder="Phone Number" value="">
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                                    <textarea required rows="10" id="ContactFormMessage" name="body"
-                                        placeholder="Message"></textarea>
-                                </div>
-                            </div>
-
-
-                            <div class="row">
-                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                                    <input type="submit" class="btn" value="Send Message">
-                                </div>
-                            </div>
-
+        <div class="container">
+            <div class="modal" tabindex="-1" id="mail">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class=" modal header">
+                            <h3>Camelia Reversible Jacket</h3>
                         </div>
-                    </form>
+                        <div class="modal-body">
+                            <form  action="{{ route('mail') }}" method="post" id="contact_form" class="contact-form">
+                                @csrf
+                                <input type="hidden" name="form_type" value="contact" />
+                                <input type="hidden" name="utf8" value="✓" />
+
+                                <div class="formFeilds">
+                                    <input type="hidden" name="contact[product name]" value="Camelia Reversible Jacket">
+                                    <input type="hidden" name="contact[product link]"
+                                        value="/products/camelia-reversible-jacket-black-red">
+
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                            <input type="text" id="ContactFormName" name="name" placeholder="Name"
+                                                value="" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                            <input type="email" id="ContactFormEmail" name="email" placeholder="Email"
+                                                autocapitalize="off" value="" required>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                            <input required type="tel" id="ContactFormPhone" name="phone"
+                                                pattern="[0-9\-]*" placeholder="Phone Number" value="">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                            <textarea required rows="10" id="ContactFormMessage" name="body"
+                                                placeholder="Message"></textarea>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                            <input type="submit" class="btn" value="Send Message">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

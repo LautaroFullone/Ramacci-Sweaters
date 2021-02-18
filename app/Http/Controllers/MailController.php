@@ -12,6 +12,7 @@ class MailController extends Controller
 {
     public function send (Request $request)
     {
+
         $name=$request->input('name');
         $mail=$request->input('email');
         $phone=$request->input('phone');

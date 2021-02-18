@@ -91,7 +91,7 @@ Route::get('/contacto', function () {
     return view('frontend.contact');
 });
 
-
+Route::post('mail', 'MailController@send' )->name('mail');
 
 
 Auth::routes();
@@ -100,4 +100,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
-Route::post('/mail','MailController@send')->name('mail');
+
