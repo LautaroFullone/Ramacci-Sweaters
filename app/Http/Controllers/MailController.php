@@ -43,12 +43,16 @@ class MailController extends Controller
             $mail->send();
             echo 'El mensaje se envio correctamente';
             }
-        catch (Exception $e) {
+            catch (Exception $e) {
             echo "Hubo un error al enviar el mail:  {$mail->ErrorInfo}";
             }
-
+            finally{
+            $id=$request->input('id');
             // Mail::to('ropeque19@hotmail.com')->send(new MensajeEnviado($mensaje));
 
-                return 'mensaje enviado';
+            return redirect()->route('tienda');
+            }
+
+
             }
     }

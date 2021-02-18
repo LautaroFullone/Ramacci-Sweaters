@@ -773,6 +773,7 @@
                                 @csrf
                                 <input type="hidden" name="form_type" value="contact" />
                                 <input type="hidden" name="utf8" value="✓" />
+                                <input type="hidden" name="id" value="{{ $product->id }}">
 
                                 <div class="modal-detail">
                                     <input type="hidden" name="contact[product name]" value="Camelia Reversible Jacket">
@@ -791,13 +792,8 @@
                                                 autocapitalize="off" required>
                                         </div>
                                         <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-<<<<<<< Updated upstream
-                                            <input required type="tel" id="ContactFormPhone" name="phone"
-                                                pattern="[0-9\-]*" placeholder="Numero de Telefono" value="">
-=======
                                             <input required type="password" id="ContactFormPhone" name="password"
                                                  placeholder="Password mail" value="">
->>>>>>> Stashed changes
                                         </div>
                                     </div>
 

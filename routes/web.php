@@ -73,7 +73,7 @@ Route::get('/productoimage/{image_id}', function ($image_id) {
 Route::get('/detalle{id}','ProductController@show');
 
 
-Route::get('/tienda/{filtro1?}/{filtro2?}', 'ProductController@shop_index');
+Route::get('/tienda/{filtro1?}/{filtro2?}', 'ProductController@shop_index')->name('tienda');
 
 Route::get('/nosotros', function () {
     return view('frontend.about-us');
