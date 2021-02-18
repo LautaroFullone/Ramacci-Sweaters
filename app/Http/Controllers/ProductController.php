@@ -188,18 +188,11 @@ class ProductController extends Controller
 
         // dd($fotos[0]->id);
 
-
-
-
-
         if ($fotos != null) {
             return view('backend.detail', ['product' => $producto, 'images' => $fotos]);
         } else {
             return view('backend.detail', ['product' => $producto]);
         }
-
-
-
     }
 
     /**

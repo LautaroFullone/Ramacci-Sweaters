@@ -45,10 +45,7 @@ Route::get('/', function () {
         $producto->image = $foto->id;
     }
 
-
-
     // dd($productsSlider1Dama);
-
 
     return view('frontend.index',[
         'productsSlider1Dama' => $productsSlider1Dama,
