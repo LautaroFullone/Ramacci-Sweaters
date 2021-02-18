@@ -552,9 +552,11 @@
                                         </div>
                                     </div>
 
-                                    <p class="infolinks"><a href="#sizechart" class="sizelink btn"> Guia de tallas</a>
-                                        <button class="btn btn-primary" type="button" data-toggle="modal"  data-target="#mail">Pregunte acerca de este
-                                            producto</button> </p>
+                                    <p class="infolinks">
+                                        <a class="sizelink btn" data-toggle="modal" data-target="#talles"> Guia de tallas</a>
+
+                                        <a class="sizelink btn" data-toggle="modal" data-target="#mail">Pregunte acerca de esteproducto</a>
+                                    </p>
 
                                     <!-- Product Action -->
                                     <div class="product-action clearfix">
@@ -599,15 +601,7 @@
                                                 <i class="fa fa-facebook-square" aria-hidden="true"></i> <span
                                                     class="share-title" aria-hidden="true">Face</span>
                                             </a>
-                                            <!-- <a target="_blank" href="#" class="btn btn--small btn--secondary btn--share share-twitter"
-                        title="Tweet on Twitter">
-                        <i class="fa fa-twitter" aria-hidden="true"></i> <span class="share-title"
-                          aria-hidden="true">Tweet</span>
-                      </a>
-                      <a href="#" title="Share on google+" class="btn btn--small btn--secondary btn--share">
-                        <i class="fa fa-google-plus" aria-hidden="true"></i> <span class="share-title"
-                          aria-hidden="true">Google+</span>
-                      </a>-->
+
                                             <a href="/" class="btn btn--small btn--secondary btn--share share-instagram"
                                                 title="Instagram" target="_blank">
                                                 <i class="fa fa-instagram" aria-hidden="true"></i> <span
@@ -709,16 +703,8 @@
                                         </a>
                                         <!-- end product image -->
 
-                                        <!-- Start product button -->
-                                        <!--
-                  <form class="variants add" action="#" onclick="window.location.href='cart.html'" method="post">
-                    <button class="btn btn-addto-cart" type="button" tabindex="0">Añadir al Carrito</button>
-                  </form>
-                  -->
-
-                                        <!-- end product button -->
                                     </div>
-                                    <!-- end product image -->
+
                                     <!--start product details -->
                                     <div class="product-details text-center">
                                         <!-- product name -->
@@ -751,16 +737,9 @@
 
                             @endforeach
 
-
-
                         </div>
                     </div>
                     <!--End Related Product Slider-->
-
-
-
-
-
                 </div>
                 <!--#ProductSection-product-template-->
             </div>
@@ -777,111 +756,17 @@
         <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
         <!--End Scoll Top-->
 
-        <div class="hide">
-            <div id="sizechart">
-                <h3>WOMEN'S BODY SIZING CHART</h3>
-                <table>
-                    <tbody>
-                        <tr>
-                            <th>Talla</th>
-                            <th>XS</th>
-                            <th>S</th>
-                            <th>M</th>
-                            <th>L</th>
-                            <th>XL</th>
-                        </tr>
-                        <tr>
-                            <td>Chest</td>
-                            <td>31" - 33"</td>
-                            <td>33" - 35"</td>
-                            <td>35" - 37"</td>
-                            <td>37" - 39"</td>
-                            <td>39" - 42"</td>
-                        </tr>
-                        <tr>
-                            <td>Cintura</td>
-                            <td>24" - 26"</td>
-                            <td>26" - 28"</td>
-                            <td>28" - 30"</td>
-                            <td>30" - 32"</td>
-                            <td>32" - 35"</td>
-                        </tr>
-                        <tr>
-                            <td>Cadera</td>
-                            <td>34" - 36"</td>
-                            <td>36" - 38"</td>
-                            <td>38" - 40"</td>
-                            <td>40" - 42"</td>
-                            <td>42" - 44"</td>
-                        </tr>
-                        <tr>
-                            <td>Entrepierna regular</td>
-                            <td>30"</td>
-                            <td>30½"</td>
-                            <td>31"</td>
-                            <td>31½"</td>
-                            <td>32"</td>
-                        </tr>
-                        <tr>
-                            <td>Long (Tall) Inseam</td>
-                            <td>31½"</td>
-                            <td>32"</td>
-                            <td>32½"</td>
-                            <td>33"</td>
-                            <td>33½"</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <h3>MEN'S BODY SIZING CHART</h3>
-                <table>
-                    <tbody>
-                        <tr>
-                            <th>Talla</th>
-                            <th>XS</th>
-                            <th>S</th>
-                            <th>M</th>
-                            <th>L</th>
-                            <th>XL</th>
-                            <th>XXL</th>
-                        </tr>
-                        <tr>
-                            <td>Chest</td>
-                            <td>33" - 36"</td>
-                            <td>36" - 39"</td>
-                            <td>39" - 41"</td>
-                            <td>41" - 43"</td>
-                            <td>43" - 46"</td>
-                            <td>46" - 49"</td>
-                        </tr>
-                        <tr>
-                            <td>Cintura</td>
-                            <td>27" - 30"</td>
-                            <td>30" - 33"</td>
-                            <td>33" - 35"</td>
-                            <td>36" - 38"</td>
-                            <td>38" - 42"</td>
-                            <td>42" - 45"</td>
-                        </tr>
-                        <tr>
-                            <td>Cadera</td>
-                            <td>33" - 36"</td>
-                            <td>36" - 39"</td>
-                            <td>39" - 41"</td>
-                            <td>41" - 43"</td>
-                            <td>43" - 46"</td>
-                            <td>46" - 49"</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div style="padding-left: 30px;"><img src="assets/images/size.jpg" alt=""></div>
-            </div>
-        </div>
+       @include('layoutsWeb.size-guide-modal')
+
         <div class="container">
             <div class="modal" tabindex="-1" id="mail">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <div class=" modal header">
-                            <h3>Camelia Reversible Jacket</h3>
+                        <div class="modal-header">
+                            <h2>Consulta sobre {{ $product->name }}</h2>
+                                <button type="button" class="close" data-dismiss="modal">
+                                    <span>×</span>
+                                </button>
                         </div>
                         <div class="modal-body">
                             <form  action="{{ route('mail') }}" method="post" id="contact_form" class="contact-form">
@@ -889,40 +774,37 @@
                                 <input type="hidden" name="form_type" value="contact" />
                                 <input type="hidden" name="utf8" value="✓" />
 
-                                <div class="formFeilds">
+                                <div class="modal-detail">
                                     <input type="hidden" name="contact[product name]" value="Camelia Reversible Jacket">
                                     <input type="hidden" name="contact[product link]"
                                         value="/products/camelia-reversible-jacket-black-red">
 
                                     <div class="row">
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                                            <input type="text" id="ContactFormName" name="name" placeholder="Name"
-                                                value="" required>
+                                            <input type="text" id="ContactFormName" name="name" placeholder="Nombre Completo" required>
                                         </div>
                                     </div>
 
                                     <div class="row">
                                         <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                                             <input type="email" id="ContactFormEmail" name="email" placeholder="Email"
-                                                autocapitalize="off" value="" required>
+                                                autocapitalize="off" required>
                                         </div>
                                         <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                                             <input required type="tel" id="ContactFormPhone" name="phone"
-                                                pattern="[0-9\-]*" placeholder="Phone Number" value="">
+                                                pattern="[0-9\-]*" placeholder="Numero de Telefono" value="">
                                         </div>
                                     </div>
 
                                     <div class="row">
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                                            <textarea required rows="10" id="ContactFormMessage" name="body"
-                                                placeholder="Message"></textarea>
+                                            <textarea required rows="10" id="ContactFormMessage" name="body" placeholder="Mensaje"></textarea>
                                         </div>
                                     </div>
 
-
                                     <div class="row">
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                                            <input type="submit" class="btn" value="Send Message">
+                                            <input type="submit" class="btn float-right" value="Send Message">
                                         </div>
                                     </div>
 
@@ -934,7 +816,6 @@
                 </div>
             </div>
         </div>
-
 
         <!-- Including Jquery -->
         <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>

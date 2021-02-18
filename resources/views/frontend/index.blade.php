@@ -999,8 +999,11 @@
     <!--Footer-->
     @include('layoutsWeb.footer')
     <!--End Footer-->
+
     <!--Scoll Top-->
-    <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
+    <span id="site-scroll" stu>
+        <i class="icon anm anm-angle-up-r"></i>
+    </span>
     <!--End Scoll Top-->
 
 

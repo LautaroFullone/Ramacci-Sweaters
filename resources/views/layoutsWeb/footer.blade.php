@@ -125,7 +125,7 @@
 
   <!--MODAL-->
 
-  <div class="modal fade" id="info">
+<div class="modal fade" id="info">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -156,7 +156,6 @@
                 <h5>Envío</h5>
                 El valor y el plazo de envío varían segun la dirección de entrega. ES PRIMORDIAL QUE INGRESES DATOS CORRECTOS ya que es tu responsabilidad informar donde debe llegar el producto. Nuestros productos se despachan dentro de los 10 (diez) días hábiles posteriores a la acreditación de tu pago. Todos los costos de envío que suceden por compras dentro de RAMACCI.COM.AR corren por cuenta exclusiva de nuestros clientes, excepto aclaración expresa en contrario (por ejemplo, en el caso de promociones).
             </div>
-
         </div>
     </div>
 </div>
