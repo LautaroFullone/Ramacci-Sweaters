@@ -32,8 +32,6 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
-
     public function shop_index($filtro1 = null, $filtro2 = null)
     {
         $todoslosproductos = Product::all();
