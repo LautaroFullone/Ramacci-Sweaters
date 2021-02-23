@@ -28,13 +28,17 @@ Route::get('/', function () {
     foreach ($productsSlider1Hombre as $key => $producto) {
 
         $foto = \App\Image::where('product_id', $producto->id)->first();
-        $producto->image = $foto->id;
+        if (!empty($foto)) {
+            $producto->image = $foto->id;
+        }
     }
 
     foreach ($productsSlider1Rebaja as $key => $producto) {
 
         $foto = \App\Image::where('product_id', $producto->id)->first();
-        $producto->image = $foto->id;
+        if (!empty($foto)) {
+            $producto->image = $foto->id;
+        }
     }
 
     $productsDestacados = \App\Product::where('in_populars', 1)->take(6)->get();
@@ -42,7 +46,9 @@ Route::get('/', function () {
     foreach ($productsDestacados as $key => $producto) {
 
         $foto = \App\Image::where('product_id', $producto->id)->first();
+        if (!empty($foto)) {
         $producto->image = $foto->id;
+        }
     }
 
     // dd($productsSlider1Dama);
