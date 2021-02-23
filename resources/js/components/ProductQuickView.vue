@@ -9,7 +9,7 @@
   grid-column-gap: 20px;
   justify-content: space-between;
   background-color: #fff;
-  
+
 }
 .image-container {
   overflow: hidden;
@@ -104,9 +104,9 @@
       <div class="close-modal" @click="closeModal">
        <i class="icon icon anm anm-times-l"></i>
       </div>
-      
 
-      
+
+
       <div class="image-container">
         <img :src="'/productoimage/' + product.image" alt="" />
       </div>
@@ -228,7 +228,7 @@
             <div class="product-form__item--submit">
               <button type="button" name="add" class="btn">
                 <span>Añadir al Carro</span>
-              </button>
+              </but
             </div>
           </div>
           <!-- End Product Action -->
@@ -242,21 +242,6 @@
       </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
   </div>
 </template>
 

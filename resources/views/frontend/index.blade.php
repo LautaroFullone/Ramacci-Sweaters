@@ -711,7 +711,7 @@
 
             <div class="collection-grid-item">
               <a href="/tienda/accesorios" class="collection-grid-item__link">
-                <img class="blur-up lazyload" data-src="assets/images/product-images/FotosRamacci/IMG_3667.jpg"
+                <img class="blur-up lazyload" data-src="assets/images/product-images/fotosramacci2/IMG_0365.jpg"
                   src="assets/images/product-images/fotosramacci2/IMG_0365.jpg" alt="Cosmetic" />
                 <div class="collection-grid-item__title-wrapper">
                   <h3 class="collection-grid-item__title btn btn--secondary no-border">Accesorios</h3>
