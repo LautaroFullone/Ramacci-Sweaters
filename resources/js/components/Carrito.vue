@@ -139,8 +139,12 @@
 
                   <div class="filter-type">
                     <div class="row-1">
+                      <div class="type-text">Remera</div>
+                      <input v-model="filters.types" type="checkbox" class="filter-checkbox" value="remeras">
+                    </div>
+                    <div class="row-1">
                       <div class="type-text">Cardigan</div>
-                      <input v-model="filters.types" type="checkbox" class="filter-checkbox" value="Cardigan">
+                      <input v-model="filters.types" type="checkbox" class="filter-checkbox" value="cardigan">
                     </div>
                     <div class="row-1">
                       <div class="type-text">Sweaters</div>

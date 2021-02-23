@@ -2392,6 +2392,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -39286,6 +39290,60 @@ var render = function() {
                     _c("div", { staticClass: "filter-type" }, [
                       _c("div", { staticClass: "row-1" }, [
                         _c("div", { staticClass: "type-text" }, [
+                          _vm._v("Remera")
+                        ]),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.filters.types,
+                              expression: "filters.types"
+                            }
+                          ],
+                          staticClass: "filter-checkbox",
+                          attrs: { type: "checkbox", value: "remeras" },
+                          domProps: {
+                            checked: Array.isArray(_vm.filters.types)
+                              ? _vm._i(_vm.filters.types, "remeras") > -1
+                              : _vm.filters.types
+                          },
+                          on: {
+                            change: function($event) {
+                              var $$a = _vm.filters.types,
+                                $$el = $event.target,
+                                $$c = $$el.checked ? true : false
+                              if (Array.isArray($$a)) {
+                                var $$v = "remeras",
+                                  $$i = _vm._i($$a, $$v)
+                                if ($$el.checked) {
+                                  $$i < 0 &&
+                                    _vm.$set(
+                                      _vm.filters,
+                                      "types",
+                                      $$a.concat([$$v])
+                                    )
+                                } else {
+                                  $$i > -1 &&
+                                    _vm.$set(
+                                      _vm.filters,
+                                      "types",
+                                      $$a
+                                        .slice(0, $$i)
+                                        .concat($$a.slice($$i + 1))
+                                    )
+                                }
+                              } else {
+                                _vm.$set(_vm.filters, "types", $$c)
+                              }
+                            }
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "row-1" }, [
+                        _c("div", { staticClass: "type-text" }, [
                           _vm._v("Cardigan")
                         ]),
                         _vm._v(" "),
@@ -39299,10 +39357,10 @@ var render = function() {
                             }
                           ],
                           staticClass: "filter-checkbox",
-                          attrs: { type: "checkbox", value: "Cardigan" },
+                          attrs: { type: "checkbox", value: "cardigan" },
                           domProps: {
                             checked: Array.isArray(_vm.filters.types)
-                              ? _vm._i(_vm.filters.types, "Cardigan") > -1
+                              ? _vm._i(_vm.filters.types, "cardigan") > -1
                               : _vm.filters.types
                           },
                           on: {
@@ -39311,7 +39369,7 @@ var render = function() {
                                 $$el = $event.target,
                                 $$c = $$el.checked ? true : false
                               if (Array.isArray($$a)) {
-                                var $$v = "Cardigan",
+                                var $$v = "cardigan",
                                   $$i = _vm._i($$a, $$v)
                                 if ($$el.checked) {
                                   $$i < 0 &&
