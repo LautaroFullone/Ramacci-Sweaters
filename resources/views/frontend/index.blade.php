@@ -73,10 +73,7 @@
 </style>
 
 <body class="template-index belle template-index-belle">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<a href="https://api.whatsapp.com/send?phone=+542235278689&text=Hola quisiera hacerte unas preguntas " class="float" target="_blank">
-<i class="fa fa-whatsapp my-float"></i>
-</a>
+   @include('layoutsWeb.whatsapp')
   <div id="pre-loader">
     <img src="assets/images/cargando_.gif" alt="Cargando..." />
   </div>

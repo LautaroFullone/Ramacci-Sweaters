@@ -39290,7 +39290,7 @@ var render = function() {
                     _c("div", { staticClass: "filter-type" }, [
                       _c("div", { staticClass: "row-1" }, [
                         _c("div", { staticClass: "type-text" }, [
-                          _vm._v("Remera")
+                          _vm._v("Remeras")
                         ]),
                         _vm._v(" "),
                         _c("input", {
