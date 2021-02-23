@@ -106,11 +106,11 @@
 
     <div class="container-fluid">
 
-      <ProductQuickView 
+      <ProductQuickView
         class="producto-modal"
         v-if="showModal"
         :product=productForModal
-        @close-modal="closeModal" 
+        @close-modal="closeModal"
       />
 
 
@@ -138,6 +138,10 @@
                   </div>
 
                   <div class="filter-type">
+                    <div class="row-1">
+                      <div class="type-text">Cardigan</div>
+                      <input v-model="filters.types" type="checkbox" class="filter-checkbox" value="Cardigan">
+                    </div>
                     <div class="row-1">
                       <div class="type-text">Sweaters</div>
                       <input v-model="filters.types" type="checkbox" class="filter-checkbox" value="sweater">
@@ -198,18 +202,18 @@
                         <div class="gender-text">Más de $8000</div>
                         <input v-model="filters.price" type="radio" name="price-range" value="d">
                       </div>
-                      
+
                     </div>
                   </div>
 
 
                 </div>
-                
+
               </div>
               <!--Categories-->
 
-              
-              
+
+
 
               <div class="filter-sizes">
                 <div class="widget-title">
@@ -237,7 +241,7 @@
                     <label for="size-5">XL</label>
                   </div>
                 </div>
-                
+
               </div>
 
 
@@ -275,7 +279,7 @@
               <div class="filter-reset">
                 <button @click="resetFilters">Limpiar filtros</button>
               </div>
-              
+
               <!--Popular Products-->
               <div class="sidebar_widget">
                 <div class="widget-title">
@@ -306,16 +310,16 @@
 
 
 
-                      
+
                     </div>
                   </div>
                 </div>
               </div>
               <!--End Popular Products-->
               <!--Banner-->
-              <div class="sidebar_widget static-banner">
+              <!--<div class="sidebar_widget static-banner">
                 <img src="assets/images/side-banner-2.jpg" alt="" />
-              </div>
+              </div>-->
               <!--Banner-->
               <!--Information-->
               <div class="sidebar_widget">
@@ -331,7 +335,7 @@
                 </div>
               </div>
               <!--end Information-->
-              
+
             </div>
           </div>
           <!--End Sidebar-->
@@ -345,7 +349,7 @@
                   <div class="row">
                     <div
                       class="col-4 col-md-4 col-lg-4 filters-toolbar__item collection-view-as d-flex justify-content-start align-items-center">
-                      
+
                     </div>
                     <div
                       class="col-4 col-md-4 col-lg-4 text-center filters-toolbar__item filters-toolbar__item--count d-flex justify-content-center align-items-center">
@@ -378,7 +382,7 @@
               <div class="grid-products grid--view-items">
                 <div class="row">
 
-                  
+
 
                     <div v-for ="product in products" :key="product.id" class="col-6 col-sm-6 col-md-4 col-lg-3 grid-view-item style2 item">
                       <div class="grid-view_image">
@@ -410,9 +414,9 @@
                           <!-- End product name -->
                           <!-- product price -->
                           <div class="product-price">
-                            
+
                               <span v-if="product.old_price" class="old-price">${{ product.old_price }}</span>
-                            
+
                             <span class="price">${{ product.price }}</span>
                           </div>
                           <!-- End product price -->
@@ -443,14 +447,14 @@
                         <!-- End product details -->
                       </div>
                     </div>
-                  
 
-                
-                  
-                  
-                  
-                  
-                  
+
+
+
+
+
+
+
                 </div>
               </div>
 
@@ -492,7 +496,7 @@ import ProductQuickView from './ProductQuickView'
                 productForModal: {},
                 sort: 'none',
                 showModal: false,
-                
+
                 filters: {
                   sort: 'none',
                   gender: '',
@@ -526,7 +530,7 @@ import ProductQuickView from './ProductQuickView'
               this.products = this.products.filter(product => product.gender == filters.gender);
             }
             console.log(this.products);
-            
+
 
 
             // Filtra por tipo de prenda
@@ -631,7 +635,7 @@ import ProductQuickView from './ProductQuickView'
                 return 0;
               });
             }
-       
+
           },
           resetFilters() {
             // Resetea los radio buttons de filter-gender
@@ -658,7 +662,7 @@ import ProductQuickView from './ProductQuickView'
 
             this.products = this.productos;
 
-            
+
           },
           setFiltersFromProps(f1, f2) {
             console.log(f1, f2);
