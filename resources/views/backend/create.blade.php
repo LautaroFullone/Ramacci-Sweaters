@@ -208,6 +208,8 @@
                                 <label for="">Categoría</label>
                                 <select name="category">
                                     <option selected value="sweater">Sweater</option>
+                                    <option value="remeras">Remeras</option>
+                                    <option value="cardigan">Cardigan</option>
                                     <option value="campera">Campera</option>
                                     <option value="chaleco">Chaleco</option>
                                     <option value="pashmina">Pashmina</option>
@@ -284,13 +286,6 @@
                             <a href="/productos" class="">Cancelar</a>
                             <input type="submit" value="Guardar Cambios">
                         </div>
-
-
-
-
-
-
-
 
                     </div>
                 </div>

@@ -139,7 +139,7 @@
 
                   <div class="filter-type">
                     <div class="row-1">
-                      <div class="type-text">Remera</div>
+                      <div class="type-text">Remeras</div>
                       <input v-model="filters.types" type="checkbox" class="filter-checkbox" value="remeras">
                     </div>
                     <div class="row-1">
