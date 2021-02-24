@@ -34,10 +34,7 @@
 
 <body class="contact-template page-template belle">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
-    <i class="fa fa-whatsapp my-float"></i>
-    </a>
+    @include('layoutsWeb.whatsapp')
   <div class="pageWrapper">
     <!--Search Form Drawer-->
     <div class="search">
@@ -129,7 +126,7 @@
                       class="anm anm-angle-down-l"></i></a>
 
                 </li>
-                <li class="lvl1"><a href="https://api.whatsapp.com/send?phone=5492234551266&text=Hola%20!%20quisiera%20realizar%20una%20consulta.%20Muchas%20Gracias"><b>WhatsApp</b> <i class="anm anm-angle-down-l"></i></a></li>
+                <li class="lvl1"><a href="https://api.whatsapp.com/send?phone=54223684-9431&text=Hola%20!%20quisiera%20realizar%20una%20consulta.%20Muchas%20Gracias"><b>WhatsApp</b> <i class="anm anm-angle-down-l"></i></a></li>
               </ul>
             </nav>
             <!--End Desktop Menu-->
@@ -271,7 +268,7 @@
         </li>
         <li class="lvl1 parent megamenu"><a href="/contacto">Contacto </a>
         </li>
-        <li class="lvl1"><a href="https://api.whatsapp.com/send?phone=5492234551266&text=Hola%20!%20quisiera%20realizar%20una%20consulta.%20Muchas%20Gracias"><b>WhatsApp</b></a>
+        <li class="lvl1"><a href="https://api.whatsapp.com/send?phone=54223684-9431&text=Hola%20!%20quisiera%20realizar%20una%20consulta.%20Muchas%20Gracias"><b>WhatsApp</b></a>
         </li>
       </ul>
     </div>
@@ -333,9 +330,9 @@
             <div class="col-12 col-sm-12 col-md-12 col-lg-5 d-flex justify-content-end align-items-center">
               <div class="footer-social">
                 <ul class="list--inline site-footer__social-icons social-icons">
-                  <li><a class="social-icons__link" href="/" target="_blank" title="Ramacci Facebook"><i
+                  <li><a class="social-icons__link" href="https://www.facebook.com/tejidosramacci" target="_blank" title="Ramacci Facebook"><i
                         class="icon icon-facebook"></i></a></li>
-                  <li><a class="social-icons__link" href="/" target="_blank" title="Ramacci Instagram"><i
+                  <li><a class="social-icons__link" href="https://www.instagram.com/ramaccisweaters/" target="_blank" title="Ramacci Instagram"><i
                         class="icon icon-instagram"></i> <span class="icon__fallback-text">Instagram</span></a></li>
                   <li><a class="social-icons__link" href="/" target="_blank" title="Ramacci YouTube"><i
                         class="icon icon-youtube"></i> <span class="icon__fallback-text">YouTube</span></a></li>

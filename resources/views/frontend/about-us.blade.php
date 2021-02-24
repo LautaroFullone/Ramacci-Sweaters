@@ -18,7 +18,8 @@
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
-<body class="page-template belle">
+<body class="page-template belle">}
+    @include('layoutsWeb.whatsapp')
 <div class="pageWrapper">
 	<!--Search Form Drawer-->
 	<div class="search">
@@ -109,7 +110,7 @@
                             class="anm anm-angle-down-l"></i></a>
 
                       </li>
-                      <li class="lvl1"><a href="https://api.whatsapp.com/send?phone=5492234551266&text=Hola%20!%20quisiera%20realizar%20una%20consulta.%20Muchas%20Gracias"><b>WhatsApp</b> <i class="anm anm-angle-down-l"></i></a></li>
+                      <li class="lvl1"><a href="https://api.whatsapp.com/send?phone=54223684-9431&text=Hola%20!%20quisiera%20realizar%20una%20consulta.%20Muchas%20Gracias"><b>WhatsApp</b> <i class="anm anm-angle-down-l"></i></a></li>
                     </ul>
                   </nav>
                     <!--End Desktop Menu-->
@@ -243,7 +244,7 @@
         </li>
         <li class="lvl1 parent megamenu"><a href="/contacto">Contacto </a>
         </li>
-        <li class="lvl1"><a href="https://api.whatsapp.com/send?phone=5492234551266&text=Hola%20!%20quisiera%20realizar%20una%20consulta.%20Muchas%20Gracias"><b>WhatsApp</b></a>
+        <li class="lvl1"><a href="https://api.whatsapp.com/send?phone=54223684-9431&text=Hola%20!%20quisiera%20realizar%20una%20consulta.%20Muchas%20Gracias"><b>WhatsApp</b></a>
         </li>
       </ul>
     </div>

@@ -23,18 +23,14 @@
           </div>
           <div class="col-12 col-sm-12 col-md-12 col-lg-5 d-flex justify-content-end align-items-center">
             <div class="footer-social">
-              <ul class="list--inline site-footer__social-icons social-icons">
-                <li><a class="social-icons__link" href="/" target="_blank" title="Ramacci Facebook"><i
-                      class="icon icon-facebook"></i></a></li>
-                <!--<li><a class="social-icons__link" href="#" target="_blank" title="Ramacci Twitter"><i class="icon icon-twitter"></i> <span class="icon__fallback-text">Twitter</span></a></li>-->
-                <!--<li><a class="social-icons__link" href="#" target="_blank" title="Ramacci Pinterest"><i class="icon icon-pinterest"></i> <span class="icon__fallback-text">Pinterest</span></a></li>-->
-                <li><a class="social-icons__link" href="/" target="_blank" title="Ramacci Instagram"><i
-                      class="icon icon-instagram"></i> <span class="icon__fallback-text">Instagram</span></a></li>
-                <!--<li><a class="social-icons__link" href="#" target="_blank" title="Ramacci Tumblr"><i class="icon icon-tumblr-alt"></i> <span class="icon__fallback-text">Tumblr</span></a></li>-->
-                <li><a class="social-icons__link" href="/" target="_blank" title="Ramacci YouTube"><i
-                      class="icon icon-youtube"></i> <span class="icon__fallback-text">YouTube</span></a></li>
-                <!--<li><a class="social-icons__link" href="#" target="_blank" title="Ramacci Vimeo"><i class="icon icon-vimeo-alt"></i> <span class="icon__fallback-text">Vimeo</span></a></li>-->
-              </ul>
+                <ul class="list--inline site-footer__social-icons social-icons">
+                    <li><a class="social-icons__link" href="https://www.facebook.com/tejidosramacci" target="_blank" title="Ramacci Facebook"><i
+                          class="icon icon-facebook"></i></a></li>
+                    <li><a class="social-icons__link" href="https://www.instagram.com/ramaccisweaters/" target="_blank" title="Ramacci Instagram"><i
+                          class="icon icon-instagram"></i> <span class="icon__fallback-text">Instagram</span></a></li>
+                    <li><a class="social-icons__link" href="#" target="_blank" title="Ramacci YouTube"><i
+                          class="icon icon-youtube"></i> <span class="icon__fallback-text">YouTube</span></a></li>
+                  </ul>
             </div>
           </div>
         </div>
@@ -86,7 +82,7 @@
                   <p>(223) 489-0176</p>
                 </li>
                 <li class="phone"><i class="icon anm anm-phone-s"></i>
-                  <p>(223) 156-849431</p>
+                  <p>(223) 684-9431</p>
                 </li>
                 <li class="email"><i class="icon anm anm-envelope-l"></i>
                   <p>info@ramacci.com.ar</p>

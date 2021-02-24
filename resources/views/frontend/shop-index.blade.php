@@ -461,6 +461,7 @@
     </div>
   </div>
 </body>
+@include('layoutsWeb.whatsapp')
 
 <!-- belle/shop-fullwidth.html   11 Nov 2019 12:39:06 GMT -->
       <!-- Including Jquery -->

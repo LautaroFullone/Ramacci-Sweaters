@@ -40,6 +40,7 @@
 </style>
 
 <body class="template-product belle">
+    @include('layoutsWeb.whatsapp')
     <div class="pageWrapper">
         <!--Search Form Drawer-->
         <div class="search">
@@ -150,7 +151,7 @@
 
                                 </li>
                                 <li class="lvl1"><a
-                                        href="https://api.whatsapp.com/send?phone=5492234551266&text=Hola%20!%20quisiera%20realizar%20una%20consulta.%20Muchas%20Gracias"><b>WhatsApp</b>
+                                        href="https://api.whatsapp.com/send?phone=54223684-9431&text=Hola%20!%20quisiera%20realizar%20una%20consulta.%20Muchas%20Gracias"><b>WhatsApp</b>
                                         <i class="anm anm-angle-down-l"></i></a></li>
                             </ul>
                         </nav>
@@ -308,7 +309,7 @@
                 <li class="lvl1 parent megamenu"><a href="/contacto">Contacto </a>
                 </li>
                 <li class="lvl1"><a
-                        href="https://api.whatsapp.com/send?phone=5492234551266&text=Hola%20!%20quisiera%20realizar%20una%20consulta.%20Muchas%20Gracias"><b>WhatsApp</b></a>
+                        href="https://api.whatsapp.com/send?phone=54223684-9431&text=Hola%20!%20quisiera%20realizar%20una%20consulta.%20Muchas%20Gracias"><b>WhatsApp</b></a>
                 </li>
             </ul>
         </div>
@@ -595,14 +596,14 @@
                                     </div>
                                     <div class="display-table-cell text-right">
                                         <div class="social-sharing">
-                                            <a target="_blank" href="#"
+                                            <a target="_blank" href="https://www.facebook.com/tejidosramacci"
                                                 class="btn btn--small btn--secondary btn--share share-facebook"
                                                 title=" Facebook">
                                                 <i class="fa fa-facebook-square" aria-hidden="true"></i> <span
                                                     class="share-title" aria-hidden="true">Face</span>
                                             </a>
 
-                                            <a href="/" class="btn btn--small btn--secondary btn--share share-instagram"
+                                            <a href="https://www.instagram.com/ramaccisweaters" class="btn btn--small btn--secondary btn--share share-instagram"
                                                 title="Instagram" target="_blank">
                                                 <i class="fa fa-instagram" aria-hidden="true"></i> <span
                                                     class="share-title" aria-hidden="true">Instagram</span>
