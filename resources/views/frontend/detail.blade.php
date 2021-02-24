@@ -555,7 +555,7 @@
                                     <p class="infolinks">
                                         <a class="sizelink btn" data-toggle="modal" data-target="#talles"> Guia de tallas</a>
 
-                                        <a class="sizelink btn" data-toggle="modal" data-target="#mail">Pregunte acerca de esteproducto</a>
+                                        <a class="sizelink btn" data-toggle="modal" data-target="#mail">Pregunte acerca de este producto</a>
                                     </p>
 
                                     <!-- Product Action -->
@@ -790,10 +790,6 @@
                                         <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                                             <input type="email" id="ContactFormEmail" name="email" placeholder="Email"
                                                 autocapitalize="off" required>
-                                        </div>
-                                        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                                            <input required type="password" id="ContactFormPhone" name="password"
-                                                 placeholder="Password mail" value="">
                                         </div>
                                     </div>
 
