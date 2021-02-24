@@ -6,12 +6,15 @@ use Illuminate\Http\Request;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
 
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MensajeEnviado;
+
 class MailController extends Controller
 {
     public function send(Request $request)
     {
         // Instantiation and passing `true` enables exceptions
-        $mail = new PHPMailer(true);
+       /* $mail = new PHPMailer(true);
 
         try {
             //Server settings
@@ -39,11 +42,11 @@ class MailController extends Controller
         } catch (Exception $e) {
             echo "Hubo un error al enviar el mail:  {$mail->ErrorInfo}";
         } finally {
-            $id = $request->input('id');
-            // Mail::to('ropeque19@hotmail.com')->send(new MensajeEnviado($mensaje));
+            $id = $request->input('id');*/
 
+            Mail::to('ropeque19@hotmail.com')->send(new MensajeEnviado($request->all()));
             return redirect()->back();
         }
 
-    }
 }
+
