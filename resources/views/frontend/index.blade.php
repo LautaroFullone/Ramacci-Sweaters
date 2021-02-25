@@ -948,14 +948,11 @@
       <!--End Latest Blog-->
 
       <!-- Instagram Feed -->
-      <div class="instagram">
-      <h2 class="h2" style="text-align: center; margin-bottom: 20px">Instagram Feed</h2>
-        <div class="instagram-content">
 
-            <div id="instafeed-container"></div>
 
-        </div>
-      </div>
+        <h2 class="h2" style="text-align: center; margin-bottom: 20px">Instagram Feed</h2>
+        @include('layoutsWeb/instagram-feed')
+
 
 
       <!--Store Feature-->
@@ -1106,6 +1103,44 @@
         accessToken: 'IGQVJYOHdXcU02STRHekQxRVhNczFQZAjl4ZAUZAiTFVQWnoxaXZAxNlN2QUFrSWNmeGJEYzlWM1VHNzZAOVVFmRU02bEZAlTHYtMFp4X0I2U1ZAKbnJuX3dfcHBUOTZATTWVIbGZAmMGNieVZALaXBtc3QyRDI1MAZDZD'
     });
     userFeed.run();
+  </script>
+
+  <script>
+  $(document).ready(function() {
+
+        /* activate the carousel */
+        $("#modal-carousel").carousel({interval:false});
+
+        /* change modal title when slide changes */
+        $("#modal-carousel").on("slid.bs.carousel",       function () {
+             $(".modal-title")
+             .html($(this)
+             .find(".active img")
+             .attr("title"));
+        });
+
+        /* when clicking a thumbnail */
+        $(".row .thumbnail").click(function(){
+         var content = $(".carousel-inner");
+         var title = $(".modal-title");
+
+         content.empty();
+         title.empty();
+
+           var id = this.id;
+          var repo = $("#img-repo .item");
+          var repoCopy = repo.filter("#" + id).clone();
+          var active = repoCopy.first();
+
+         active.addClass("active");
+         title.html(active.find("img").attr("title"));
+           content.append(repoCopy);
+
+         // show the modal
+           $("#modal-gallery").modal("show");
+       });
+
+     });
   </script>
 </body>
 

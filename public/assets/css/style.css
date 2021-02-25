@@ -6721,3 +6721,21 @@ body.home15-funiture-template {
 .my-float{
 	margin-top:16px;
 }
+
+.thumbnail {margin-bottom:6px;}
+
+.carousel-control.left,.carousel-control.right{
+  background-image:none;
+  margin-top:10%;
+  width:5%;
+}
+
+.contenedor-img img{
+    height: 310px;
+    width: 400px;
+    margin: 1em;
+    overflow: hidden;
+}
+
+
+
