@@ -10,6 +10,10 @@
                 <div class="header-text">Instagram Feed</div>
             </div>
 
+            @foreach ($images as $image)
+
+
+            @endforeach
             <form action="">
 
 

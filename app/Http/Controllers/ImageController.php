@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\instagram;
 
 class ImageController extends Controller
 {
@@ -13,7 +14,9 @@ class ImageController extends Controller
      */
     public function index()
     {
-        //
+        $images = Instagram::all();
+
+        return view('backend/instagram')->with(['images'=>$images]);
     }
 
     /**
@@ -57,7 +60,7 @@ class ImageController extends Controller
     public function edit()
     {
 
-        return view('backend/instagram');
+
     }
 
     /**
