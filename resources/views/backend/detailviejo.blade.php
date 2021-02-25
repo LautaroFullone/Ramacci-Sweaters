@@ -6,51 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>RAMACCI</title>
+    <link rel="stylesheet" href="assets/css/stylebackend.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<style scoped>
-    .main-container {
-        display: grid;
-        grid-template-columns: 250px auto;
-        font-family: sans-serif;
-    }
-
-    .content-container {
-        background-color: #ccc;
-    }
-
-    .form-input-group {
-        width: 100%;
-        padding: 20px;
-        box-sizing: border-box;
-        background-color: #fff;
-    }
-
-    .header {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        justify-content: space-between;
-        width: 100%;
-        height: 80px;
-        box-sizing: border-box;
-        padding: 20px;
-        font-size: 30px;
-        background-color: #eee;
-        font-family: sans-serif;
-        align-items: center;
-    }
-
-    .form-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 20px;
-    }
-
-    .form-input-group label {
-        display: block;
-    }
-
-</style>
 
 <body>
 

@@ -19,6 +19,7 @@ Route::get('/', function () {
 
     foreach ($productsSlider1Dama as $key => $producto) {
 
+
         $foto = \App\Image::where('product_id', $producto->id)->first();
         if (!empty($foto)) {
             $producto->image = $foto->id;
@@ -102,5 +103,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+Route::get('/instagram', 'ImageController@index');
 
 

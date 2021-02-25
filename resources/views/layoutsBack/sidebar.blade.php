@@ -16,10 +16,10 @@
           <div class="item-text">Novedades</div>
         </div>
       </a>
-      <a href="">
+      <a href="/instagram">
         <div class="menu-item">
-          <i class="fa fa-photo"></i>
-          <div class="item-text">Imagen Oferta</div>
+            <i class="fa fa-instagram"></i>
+          <div class="item-text">Imagenes de tu Instagram</div>
         </div>
       </a>
       <a href="/">
