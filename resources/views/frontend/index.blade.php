@@ -857,8 +857,11 @@
                     <div class="button-set">
 
                       <!-- Start product button -->
-                      <form class="variants add" action="#" onclick="window.location.href='cart.html'" method="post">
-                        <button class="btn cartIcon btn-addto-cart" type="button" tabindex="0"><i
+                      <form class="variants add" action="{{ route('cart.add') }}"  method="post">
+                        @csrf
+
+                        <input type="hidden" name="id" value="{{ $product->id }}">
+                        <button class="btn cartIcon btn-addto-cart" type="submit" tabindex="0"><i
                             class="icon anm anm-bag-l"></i></button>
                       </form>
                       <div class="wishlist-btn">
@@ -892,7 +895,7 @@
           <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
               <div class="section-header text-center">
-                <h2 class="h2">Lo Ultimo de Nuestro Blog</h2>
+                <h2 class="h2">Lo Ultimo de Nuestro Blog </h2>
               </div>
             </div>
           </div>

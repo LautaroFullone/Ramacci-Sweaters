@@ -118,3 +118,8 @@ Route::post('/showEdit','ImageController@showEdit')->name('showEdit');
 
 Route::post('/destroyIg','imageController@destroy')->name('destroyIg');
 
+Route::post('/carro-agregar', 'CartController@add')->name('cart.add');
+Route::get('/carro-index', 'CartController@showCart')->name('cart.showCart');
+Route::post('/carro-limpiar', 'CartController@clear')->name('cart.clear');
+Route::get('/carro-remover/{id}', 'CartController@removeItem')->name('cart.remove');
+
