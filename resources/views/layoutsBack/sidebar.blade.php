@@ -16,7 +16,7 @@
           <div class="item-text">Novedades</div>
         </div>
       </a>
-      <a href="/instagram">
+      <a href="/insta">
         <div class="menu-item">
             <i class="fa fa-instagram"></i>
           <div class="item-text">Imagenes de tu Instagram</div>

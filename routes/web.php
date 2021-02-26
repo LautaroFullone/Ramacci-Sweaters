@@ -104,6 +104,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
-Route::get('/instagram', 'ImageController@index');
+Route::get('/insta', 'ImageController@index')->name('insta');
+
+Route::get('/imagenIg', 'ImageController@showFormImg')->name('imagenIg');
+
+Route::post('/saveImg','ImageController@store')->name('saveImg');
 
 

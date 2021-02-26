@@ -2,8 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Image;
 use Illuminate\Http\Request;
-use App\instagram;
+use App\imageIg;
+use Dotenv\Validator;
+use Illuminate\Auth\Events\Validated;
+use Symfony\Component\HttpKernel\HttpCache\Store;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\File;
 
 class ImageController extends Controller
 {
@@ -14,7 +20,7 @@ class ImageController extends Controller
      */
     public function index()
     {
-        $images = Instagram::all();
+         $images = imageIg::all();
 
         return view('backend/instagram')->with(['images'=>$images]);
     }
@@ -37,8 +43,27 @@ class ImageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+       $validated = $request->validate([
+            'img'=>'required|image|mimes:png,jpg'
+        ]);
+        //guardo lo q trajo el formulario
+        $imagen=$request->file('img');
+        $imagen_path=time().'.'.$imagen->getClientOriginalExtension();
+        $destino=public_path('images/instagram');
+        $request->img->move($destino,$imagen_path);
+
+        //Creo el objeto y lo guardo en bdd
+        $image= new imageIg();
+        $image->src=$imagen_path;
+        $image->save();
+        dd('no se rompio');
+
     }
+
+
+
+
 
     /**
      * Display the specified resource.
@@ -84,5 +109,10 @@ class ImageController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function showFormImg()
+    {
+        return view('backend/createIg');
     }
 }

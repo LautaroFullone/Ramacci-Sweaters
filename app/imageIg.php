@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class instagram extends Model
+class imageIg extends Model
 {
     protected $table= 'instagram';
 }
