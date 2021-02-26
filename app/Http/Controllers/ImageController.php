@@ -83,7 +83,7 @@ class ImageController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Request $request )
-    {   
+    {
         $id=$request->id;
         $image=imageIg::find($id);
         $imagen=$request->file('img');
@@ -121,6 +121,7 @@ class ImageController extends Controller
     {
         $id=$request->id;
         $image=imageIg::find($id);
+        unlink(public_path('images/instagram/'.$image->src));
         $image->delete();
         return redirect()->route('insta');
     }
