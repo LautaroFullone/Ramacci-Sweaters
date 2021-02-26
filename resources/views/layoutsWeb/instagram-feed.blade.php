@@ -2,24 +2,13 @@
 <div class="container">
     <div class="row">
       <div class="row" >
-
+        @foreach($imageIg as $image)
                 <div class="contenedor-img "  >
                       <a title="Image 1" >
-                          <img class="thumbnail img-responsive" id="image-1" src="assets/images/FotosRamacci/Originals/IMG_3151.jpg">
+                          <img class="thumbnail img-responsive" id="image-1"  src="images/instagram/{{ $image->src }}">
                       </a>
-                  </div>
-
-                  <div class=" contenedor-img " >
-                      <a title="Image 2" >
-                          <img class="thumbnail img-responsive" id="image-2" src="assets/images/FotosRamacci/Originals/IMG_3667.jpg">
-                      </a>
-
-                  </div>
-                  <div class="contenedor-img ">
-                      <a title="Image 3" >
-                          <img class="thumbnail img-responsive" id="image-3" src="assets\images\hombres\ART.-159-e1579999051802.jpeg">
-                      </a>
-                  </div>
+                </div>
+        @endforeach
       </div>
 
       <hr>
@@ -27,23 +16,13 @@
     </div>
 </div>
 
-      <div class="hidden" id="img-repo">
-
+      <div class="hidden" id="img-repo" >
           <!-- #image-1 -->
-          <div class="item"  id="image-1">
-              <img class="thumbnail img-responsive"  src="assets/images/FotosRamacci/Originals/IMG_3151.jpg">
+          
+          <div class="item"  id='image-1'>
+              <img class="thumbnail img-responsive"  src="images/instagram/{{ $image->src }}">
           </div>
-
-
-          <!-- #image-2 -->
-          <div class="item" id="image-2">
-              <img class="thumbnail img-responsive"  src="assets/images/FotosRamacci/Originals/IMG_3667.jpg">
-          </div>
-
-          <!-- #image-3-->
-          <div class="item" id="image-3">
-              <img class="thumbnail img-responsive"  src="assets\images\hombres\ART.-159-e1579999051802.jpeg">
-          </div>
+            
 
       </div>
 

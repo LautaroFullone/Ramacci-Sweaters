@@ -33,14 +33,19 @@
                         </div>
                         <div class="table-item-field">
                             <div class="actions">
-                                <a href="/productos/{{ $product['id'] }}/edit">
-                                    <button class="action-edit" value="Editar"><i
+                                
+                                <form method="POST" action="{{route('showEdit')}}">
+                                    {{ csrf_field()}}
+                                    {{ method_field('POST') }}
+                                    <input type="hidden" name="id" value="{{$imagen->id}}">
+                                    <button class="action-edit" value="Eliminar"><i
                                             class="fa fa-edit"></i>Editar</button>
-                                </a>
+                                </form>
 
-                                <form method="POST" action="/productos/{{ $product['id'] }}">
-                                    {{ csrf_field() }}
-                                    {{ method_field('DELETE') }}
+                                <form method="POST" action="{{route('destroyIg')}}">
+                                    {{ csrf_field()}}
+                                    {{ method_field('POST') }}
+                                    <input type="hidden" name="id" value="{{$imagen->id}}">
                                     <button class="action-delete" value="Eliminar"><i
                                             class="fa fa-trash"></i>Eliminar</button>
                                 </form>

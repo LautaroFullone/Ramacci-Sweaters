@@ -16,7 +16,8 @@ Route::get('/', function () {
     $productsSlider1Dama = \App\Product::where('in_novelties', 1)->where('gender', 'dama')->take(8)->get();
     $productsSlider1Hombre = \App\Product::where('in_novelties', 1)->where('gender', 'caballero')->take(8)->get();
     $productsSlider1Rebaja = \App\Product::where('in_discounts', 1)->take(8)->get();
-
+    $imageIg=\App\imageIg::all();
+    //dd($imageIg)
     foreach ($productsSlider1Dama as $key => $producto) {
 
 
@@ -58,7 +59,8 @@ Route::get('/', function () {
         'productsSlider1Dama' => $productsSlider1Dama,
         'productsSlider1Hombre' => $productsSlider1Hombre,
         'productsSlider1Rebaja' => $productsSlider1Rebaja,
-        'productsDestacados' => $productsDestacados
+        'productsDestacados' => $productsDestacados,
+        'imageIg'=> $imageIg,
         ]);
 });
 
@@ -110,4 +112,9 @@ Route::get('/imagenIg', 'ImageController@showFormImg')->name('imagenIg');
 
 Route::post('/saveImg','ImageController@store')->name('saveImg');
 
+Route::post('/editIg','ImageController@edit')->name('editIg');
+
+Route::post('/showEdit','ImageController@showEdit')->name('showEdit');
+
+Route::post('/destroyIg','imageController@destroy')->name('destroyIg');
 

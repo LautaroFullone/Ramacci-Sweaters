@@ -57,7 +57,7 @@ class ImageController extends Controller
         $image= new imageIg();
         $image->src=$imagen_path;
         $image->save();
-        dd('no se rompio');
+        return redirect()->route('insta');
 
     }
 
@@ -82,12 +82,23 @@ class ImageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit()
-    {
-
-
+    public function edit(Request $request )
+    {   
+        $id=$request->id;
+        $image=imageIg::find($id);
+        $imagen=$request->file('img');
+        $imagen_path=time().'.'.$imagen->getClientOriginalExtension();
+        $destino=public_path('images/instagram');
+        $request->img->move($destino,$imagen_path);
+        $image->src=$imagen_path;
+        $image->save();
+        return redirect()->route('insta');
     }
 
+    public function showEdit(Request $request){
+        $id=$request->id;
+        return view('backend/editIg')->with(['id'=>$id]);
+    }
     /**
      * Update the specified resource in storage.
      *
@@ -106,9 +117,12 @@ class ImageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        $id=$request->id;
+        $image=imageIg::find($id);
+        $image->delete();
+        return redirect()->route('insta');
     }
 
     public function showFormImg()
