@@ -54,15 +54,17 @@ Route::get('/', function () {
     }
 
     // dd($productsSlider1Dama);
+    $user=Auth::user();
 
     return view('frontend.index',[
+        'user'=> $user,
         'productsSlider1Dama' => $productsSlider1Dama,
         'productsSlider1Hombre' => $productsSlider1Hombre,
         'productsSlider1Rebaja' => $productsSlider1Rebaja,
         'productsDestacados' => $productsDestacados,
         'imageIg'=> $imageIg,
         ]);
-});
+})->name('/');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('productos', 'ProductController');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Product;
 use App\Image;
+use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
 
@@ -15,6 +16,9 @@ class ProductController extends Controller
      */
     public function index()
     {
+        $user=Auth::user();
+        if($user->role =='admin')
+        {
         $productos = Product::orderBy('created_at', 'desc')->paginate(500);
 
         foreach ($productos as $key => $producto) {
@@ -24,6 +28,11 @@ class ProductController extends Controller
             }
         }
         return view('backend.index', ['products' => $productos]);
+        }
+        else
+        {
+            return redirect()->route('/');
+        }
     }
 
 

@@ -21,57 +21,6 @@
   <link rel="stylesheet" href="assets/ccs/master.css">
 </head>
 
-<style>
-.instagram {
-    margin: 50px 5%;
-}
-
-.instagram .section-title {
-    font-family: Lato-Bold;
-    font-size: 14px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-.instagram .instagram-content {
-    width: 100%;
-}
-#instafeed-container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
-}
-#instafeed-container > :nth-child(n+5) {
-    display: none;
-}
-@media only screen and (max-width: 767px) {
-  #instafeed-container {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 30px;
-  }
-}
-@media only screen and (max-width: 400px) {
-  #instafeed-container {
-    grid-template-columns: 1fr;
-  }
-}
-
-.grid-view_image {
-  height: 492px;
-}
-
-.grid-view-item__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.grid-view-item__link {
-  height: 100%;
-}
-
-</style>
-
 <body class="template-index belle template-index-belle">
    @include('layoutsWeb.whatsapp')
   <div id="pre-loader">
@@ -191,6 +140,7 @@
               </a>
               <!--Minicart Popup-->
               <div id="header-cart" class="block block-cart">
+
                 <ul class="mini-products-list">
                   <li class="item">
                     <a class="product-image" href="#">

@@ -121,7 +121,7 @@ class ImageController extends Controller
     {
         $id=$request->id;
         $image=imageIg::find($id);
-        unlink(public_path('images/instagram/'.$image->src));
+        //unlink(public_path('images/instagram/'.$image->src));
         $image->delete();
         return redirect()->route('insta');
     }
