@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', function () {
 
     $productsSlider1Dama = \App\Product::where('in_novelties', 1)->where('gender', 'dama')->take(8)->get();
@@ -84,11 +85,14 @@ Route::get('/detalle{id}','ProductController@show');
 Route::get('/tienda/{filtro1?}/{filtro2?}', 'ProductController@shop_index')->name('tienda');
 
 Route::get('/nosotros', function () {
-    return view('frontend.about-us');
+    $user=Auth::user();
+    return view('frontend.about-us',['user'=>$user]);
 });
 
 Route::get('/faqs', function () {
-    return view('frontend.faqs');
+
+    $user=Auth::user();
+    return view('frontend.faqs',['user'=>$user]);
 });
 
 Route::get('/blog', function () {
@@ -96,7 +100,8 @@ Route::get('/blog', function () {
 });
 
 Route::get('/contacto', function () {
-    return view('frontend.contact');
+    $user=Auth::user();
+    return view('frontend.contact',['user'=>$user]);
 });
 
 Route::post('mail', 'MailController@send' )->name('mail');
@@ -105,21 +110,20 @@ Route::post('mail', 'MailController@send' )->name('mail');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
-
+//Rutas de Usuario
+Route::get('/showEditUserList','UserController@showEdiList')->name('showEditUserList');
+Route::post('/showEditUser','UserController@showEdit')->name('showEditUser');
+Route::post('/editUser','UserController@edit')->name('editUser');
+Route::post('/destroyUser','UserController@destroy')->name('destroyUser');
+//Rutas instagram
 Route::get('/insta', 'ImageController@index')->name('insta');
-
 Route::get('/imagenIg', 'ImageController@showFormImg')->name('imagenIg');
-
 Route::post('/saveImg','ImageController@store')->name('saveImg');
-
 Route::post('/editIg','ImageController@edit')->name('editIg');
-
 Route::post('/showEdit','ImageController@showEdit')->name('showEdit');
-
 Route::post('/destroyIg','imageController@destroy')->name('destroyIg');
-
+//Rutas carrito
 Route::post('/carro-agregar', 'CartController@add')->name('cart.add');
 Route::get('/carro-index', 'CartController@showCart')->name('cart.showCart');
 Route::post('/carro-limpiar', 'CartController@clear')->name('cart.clear');

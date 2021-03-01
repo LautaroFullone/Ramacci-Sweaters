@@ -28,6 +28,13 @@
           <div class="item-text">Ir al sitio</div>
         </div>
       </a>
+      <a href="/showEditUserList">
+        <div class="menu-item">
+          <i class="fa fa-desktop"></i>
+          <div class="item-text">Modificar User</div>
+        </div>
+      </a>
+
       <a href="/logout" onclick="return confirm('¿Cerrar sesión?')">
         <div class="menu-item">
           <i class="fa fa-reply"></i>

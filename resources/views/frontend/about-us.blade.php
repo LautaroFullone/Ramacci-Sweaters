@@ -62,6 +62,21 @@
                           <li><a href="/faqs" class="site-nav">FAQs</a></li>
                         </ul>
                       </li>
+                      @if ($user==null)
+                      <li class="lvl1 parent megamenu"><a >Cuenta <i class="anm anm-angle-down-l"></i></a>
+                          <ul class="dropdown">
+                            <li><a href="/register" class="site-nav">Registrarse <span class=""></span> </a></li>
+                            <li><a href="/login" class="site-nav">Iniciar sesion</a></li>
+                          </ul>
+                      </li>
+                      @else
+                      <li class="lvl1 parent megamenu"><a>{{ $user->name }} <i class="anm anm-angle-down-l"></i></a>
+                          <ul class="dropdown">
+                            <li><a href="/carro-index" class="site-nav">Mis compras <span class=""></span> </a></li>
+                            <li><a href="/logout" class="site-nav">Cerrar sesion</a></li>
+                          </ul>
+                      </li>
+                      @endif
                       <li class="lvl1 parent megamenu"><a href="/tienda">Tienda<i
                             class="anm anm-angle-down-l"></i></a>
 
