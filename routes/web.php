@@ -96,7 +96,8 @@ Route::get('/faqs', function () {
 });
 
 Route::get('/blog', function () {
-    return view('frontend.blog');
+    $user=Auth::user();
+    return view('frontend.blog',['user'=>$user]);
 });
 
 Route::get('/contacto', function () {

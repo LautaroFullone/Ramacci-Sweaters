@@ -67,9 +67,9 @@ class ProductController extends Controller
             $foto = \App\Image::where('product_id', $producto->id)->first();
             $producto->image = $foto->id;
         }
+        $user=Auth::user();
 
-
-        return view('frontend.shop-index', ['allproducts' => $todoslosproductos, 'populars' => $productsDestacados, 'filter1' => $filtro1, 'filter2' => $filtro2]);
+        return view('frontend.shop-index', ['allproducts' => $todoslosproductos, 'populars' => $productsDestacados, 'filter1' => $filtro1, 'filter2' => $filtro2,'user'=>$user]);
     }
 
     public function create()
