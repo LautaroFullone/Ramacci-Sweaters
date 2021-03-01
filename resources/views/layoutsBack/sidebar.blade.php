@@ -1,3 +1,4 @@
+
 <div class="sidebar-container">
     <div class="admin-name">
       <div><i class="fa fa-user-circle"></i> Hola, Ramacci</div>
@@ -30,7 +31,7 @@
       </a>
       <a href="/showEditUserList">
         <div class="menu-item">
-          <i class="fa fa-desktop"></i>
+            <i class="fas fa-address-book"></i>
           <div class="item-text">Modificar User</div>
         </div>
       </a>

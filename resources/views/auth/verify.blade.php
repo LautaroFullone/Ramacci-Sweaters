@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+<title>Ramacci Sweaters | Verify</title>
+
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
