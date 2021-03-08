@@ -14,7 +14,6 @@ class MailController extends Controller
     public function send(Request $request)
     {
 
-
             Mail::to('ropeque19@hotmail.com')->send(new MensajeEnviado($request->all()));
             return redirect()->back();
         }

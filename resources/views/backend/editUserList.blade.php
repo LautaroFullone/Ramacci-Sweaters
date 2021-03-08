@@ -19,6 +19,7 @@
 
                     <div class="table-header-item">Nombre</div>
                     <div class="table-header-item">Email</div>
+                    <div class="table-header-item">Rol</div>
                 </div>
 
                 <div class="table-content">
@@ -26,7 +27,7 @@
                     <div class="table-item">
                             <div class="table-item-field">{{ $user->name }}</div>
                             <div class="table-item-field">{{ $user->email }}</div>
-
+                            <div class="table-item-field">{{ $user->role }}</div>
                         <div class="table-item-field">
                             <div class="actions">
 

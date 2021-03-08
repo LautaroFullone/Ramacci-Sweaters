@@ -179,8 +179,8 @@ class ProductController extends Controller
 
         //dd(is_array($relacionados));
 
-
-        return view('frontend.detail', ['product' => $producto, 'images' => $fotos, 'related' => $relacionados]);
+        $user=Auth::user();
+        return view('frontend.detail', ['product' => $producto, 'images' => $fotos, 'related' => $relacionados,'user'=>$user]);
     }
 
     /**

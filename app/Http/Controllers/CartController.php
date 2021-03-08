@@ -6,12 +6,17 @@ use Illuminate\Http\Request;
 use Cart;
 use App\Product;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\CartBdd;
+use App\BddCart;
 
 class CartController extends Controller
 {
 
+    private $cartBdd;
+
     public function __construct()
-    {
+    {   $this->cartBdd= new CartBdd();
+        $this->BddCart= new BddCart();
         $this->middleware('auth');
     }
 
@@ -28,29 +33,62 @@ class CartController extends Controller
                     'associatedModel' => $product
         ));
 
+        $carrito = Cart::session($user_id)->getContent();
+        $this->cartBdd->put($user_id,$carrito);
+
         return redirect()->back();
     }
+    public function addNoRequest($carro)
+    {   $user_id = Auth::user()->id;
 
-    public function showCart(){
-        $user_id = Auth::user()->id;
-        $carrito = Cart::session($user_id)->getContent();
+        foreach ($carro as $key => $carrito)
+        {
+        Cart::session($user_id)->add(array(
+            'id' =>$carrito->id,
+            'name' => $carrito->name,
+            'quantity' =>  $carrito->quantity,
+            'price' => $carrito->price,
+            'attributes' => array(),
+            'associatedModel' => $carrito->associatedModel
+        ));
 
-        return view('web.shopping-cart')-> with(array('carrito' => $carrito));
+        }
     }
-
     public function removeItem($id){
         $user_id = Auth::user()->id;
         Cart::session($user_id)->remove(array(
                     'id' => $id
         ));
-
-        return redirect()->back();
+            $carrito = Cart::session($user_id)->getContent();
+            $this->cartBdd->put($user_id,$carrito);
+            return redirect()->back();
     }
 
     public function clear(){
         $user_id = Auth::user()->id;
         Cart::session($user_id)->clear();
-
+            $carrito = Cart::session($user_id)->getContent();
+            $this->cartBdd->put($user_id,$carrito);
         return redirect()->back();
+    }
+    public function updateup($id){
+        $user_id = Auth::user()->id;
+        Cart::session($user_id)->update($id,array(
+            'quantity'=> +1
+        ));
+
+            $carrito = Cart::session($user_id)->getContent();
+            $this->cartBdd->put($user_id,$carrito);
+            return redirect()->back();
+    }
+    public function updatedown($id){
+        $user_id = Auth::user()->id;
+        Cart::session($user_id)->update($id,array(
+            'quantity'=> -1
+        ));
+
+            $carrito = Cart::session($user_id)->getContent();
+            $this->cartBdd->put($user_id,$carrito);
+            return redirect()->back();
     }
 }
