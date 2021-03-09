@@ -6,8 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
+    protected $table= 'products';
+
+
     public function images()
     {
-        return $this->hasMany('App\Image');
+        return $this->hasMany('App\Image','product_id');
     }
 }
