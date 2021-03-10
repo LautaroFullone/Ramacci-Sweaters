@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Product;
 use App\Image;
+use App\imageIg;
+use Cart;
 use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
@@ -64,8 +66,11 @@ class ProductController extends Controller
 
         foreach ($productsDestacados as $key => $producto) {
 
-            $foto = \App\Image::where('product_id', $producto->id)->first();
-            $producto->image = $foto->id;
+            $foto = Image::where('product_id', $producto->id)->first();
+
+            if (!empty($foto)) {
+                $producto->image = $foto->id;
+            }
         }
         $user=Auth::user();
 
@@ -179,8 +184,40 @@ class ProductController extends Controller
 
         //dd(is_array($relacionados));
 
+        $cartBdd= new CartBdd();
+        $cartController= new CartController();
         $user=Auth::user();
+        if($user!=null){
+            $user_carro=$cartBdd->get($user->id);
+            $subtotal = Cart::session($user->id)->getSubTotal();
+
+            if(!empty($user_carro) && $subtotal == 0.0)
+            {
+                $cartController->addNoRequest($user_carro);
+            }
+            $cartTotalQuantity = Cart::session($user->id)->getTotalQuantity();
+            $carro=Cart::session($user->id)->getContent();
+            $total=Cart::session($user->id)->getTotal();
+
+            foreach($carro as $carrito)
+            {
+                $foto = Image::where('product_id', $carrito->associatedModel->id)->first();
+
+                if($foto != null) {
+                    $carrito->image = $foto->id;
+                }
+
+
+            }
+
+        return view('frontend.detail', ['product' => $producto, 'images' => $fotos, 'related' => $relacionados,'user'=>$user,'subTotal'=>$subtotal,
+        'quantity'=>$cartTotalQuantity,
+        'carro'=>$carro,
+        'total'=>$total]);
+        }
+       else{
         return view('frontend.detail', ['product' => $producto, 'images' => $fotos, 'related' => $relacionados,'user'=>$user]);
+       }
     }
 
     /**

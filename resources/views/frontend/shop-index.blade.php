@@ -159,72 +159,7 @@
                 <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count">2</span>
               </a>
               <!--Minicart Popup-->
-              <div id="header-cart" class="block block-cart">
-                <ul class="mini-products-list">
-                  <li class="item">
-                    <a class="product-image" href="#">
-                      <img src="assets/images/fotosramacci2/IMG_0360.jpg" alt="Prenda3" title="" />
-                    </a>
-                    <div class="product-details">
-                      <a href="#" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
-                      <a href="#" class="edit-i remove"><i class="anm anm-edit" aria-hidden="true"></i></a>
-                      <a class="pName" href="/">Sweaters</a>
-                      <div class="variant-cart">Negro / XL</div>
-                      <div class="wrapQtyBtn">
-                        <div class="qtyField">
-                          <span class="label">Cant.:</span>
-                          <a class="qtyBtn minus" href="javascript:void(0);"><i class="fa anm anm-minus-r"
-                              aria-hidden="true"></i></a>
-                          <input type="text" id="Quantity" name="quantity" value="1" class="product-form__input qty">
-                          <a class="qtyBtn plus" href="javascript:void(0);"><i class="fa anm anm-plus-r"
-                              aria-hidden="true"></i></a>
-                        </div>
-                      </div>
-                      <div class="priceRow">
-                        <div class="product-price">
-                          <span class="money">$590.00</span>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <a class="product-image" href="#">
-                      <img src="assets/images/fotosramacci3/IMG_4885.jpg" alt="Prenda2 - Black / Small" title="" />
-                    </a>
-                    <div class="product-details">
-                      <a href="#" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
-                      <a href="#" class="edit-i remove"><i class="anm anm-edit" aria-hidden="true"></i></a>
-                      <a class="pName" href="/">Campera</a>
-                      <div class="variant-cart">Gray / XXL</div>
-                      <div class="wrapQtyBtn">
-                        <div class="qtyField">
-                          <span class="label">Cant.:</span>
-                          <a class="qtyBtn minus" href="javascript:void(0);"><i class="fa anm anm-minus-r"
-                              aria-hidden="true"></i></a>
-                          <input type="text" id="Quantity" name="quantity" value="1" class="product-form__input qty">
-                          <a class="qtyBtn plus" href="javascript:void(0);"><i class="fa anm anm-plus-r"
-                              aria-hidden="true"></i></a>
-                        </div>
-                      </div>
-                      <div class="priceRow">
-                        <div class="product-price">
-                          <span class="money">$909.00</span>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-                <div class="total">
-                  <div class="total-in">
-                    <span class="label">Precio Subtotal:</span><span class="product-price"><span
-                        class="money">$748.00</span></span>
-                  </div>
-                  <div class="buttonSet text-center">
-                    <a href="/" class="btn btn-secondary btn--small">Carrito</a>
-                    <a href="/" class="btn btn-secondary btn--small">Checkout</a>
-                  </div>
-                </div>
-              </div>
+              @include('layoutsBack.carro')
               <!--End Minicart Popup-->
             </div>
             <!--

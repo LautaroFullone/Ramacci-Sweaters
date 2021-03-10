@@ -58,6 +58,7 @@ class webController extends Controller
         }
 
         // dd($productsSlider1Dama);
+        if($user!=null){
         $user_carro=$cartBdd->get($user->id);
         $subtotal = Cart::session($user->id)->getSubTotal();
 
@@ -66,6 +67,22 @@ class webController extends Controller
             $cartController->addNoRequest($user_carro);
         }
         $cartTotalQuantity = Cart::session($user->id)->getTotalQuantity();
+        $carro=Cart::session($user->id)->getContent();
+        $total=Cart::session($user->id)->getTotal();
+
+        foreach($carro as $carrito)
+        {
+            $foto = Image::where('product_id', $carrito->associatedModel->id)->first();
+
+            if($foto != null) {
+                $carrito->image = $foto->id;
+            }
+
+
+        }
+
+
+
 
         return view('frontend.index',[
             'user'=> $user,
@@ -76,6 +93,20 @@ class webController extends Controller
             'imageIg'=> $imageIg,
             'subTotal'=>$subtotal,
             'quantity'=>$cartTotalQuantity,
+            'carro'=>$carro,
+            'total'=>$total
             ]);
+        }
+        else{
+        return view('frontend.index',[
+            'user'=> $user,
+            'productsSlider1Dama' => $productsSlider1Dama,
+            'productsSlider1Hombre' => $productsSlider1Hombre,
+            'productsSlider1Rebaja' => $productsSlider1Rebaja,
+            'productsDestacados' => $productsDestacados,
+            'imageIg'=> $imageIg,
+
+            ]);
+        }
     }
 }
