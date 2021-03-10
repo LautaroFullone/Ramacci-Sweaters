@@ -46,24 +46,29 @@ class ProductImageController extends Controller
 
         // dd($request->all());
 
-        $validated = $request->validate([
-            'img'=>'image|mimes:png,jpg'
-        ]);
-
         foreach ($request->file('images') as $file ) {
 
-            $path =time().'.'.$file->getClientOriginalExtension();
-            $destino= public_path('images/products');
+            $allowedfileExtension = ['pdf', 'jpeg', 'jpg', 'png', 'bmp'];
 
-            $file->move($destino,$path);
-            $imagen = new Image;
-            $imagen->product_id = $product_id;
+            $extension = $file->getClientOriginalExtension();
 
-            $imagen->src = $path;
+            $check = in_array($extension, $allowedfileExtension);
 
-            $imagen->save();
+            if ($check) {
+                $filename = $file->store('public/products');
+
+                $imagen = new Image;
+
+                // $imagen->main = 0;
+
+                $imagen->product_id = $product_id;
+
+                $imagen->src = $filename;
+
+                $imagen->save();
 
             }
+        }
         return response('la imagen ha sido guardada ', 200);
 
     }
@@ -111,15 +116,11 @@ class ProductImageController extends Controller
     public function destroy($id)
     {
         $imagen = Image::find($id);
-
+            
         $productid = $imagen->product_id;
-
+            
         $imagen->delete();
-
+    
         return response("La imagen ha sido borrada.", 200);
-    }
-    public function getImage($file_name){
-        $file = Storage::disk('images')->get($file_name);
-        return new Response($file, 200);
     }
 }
